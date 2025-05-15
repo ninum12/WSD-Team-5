@@ -136,6 +136,13 @@ nav ul li a {
   color: #fff;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
 footer {
   width: 100%;
   background-color: rgb(217, 217, 214);

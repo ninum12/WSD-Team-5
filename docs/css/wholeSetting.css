@@ -1,8 +1,9 @@
 :root {
+  /* 폰트 굵기 */
   --light: 300;
   --medium: 500;
   --bold: 700;
-
+  /* 색상 */
   --blue: rgb(0, 48, 135);
   --blue-light: rgb(0, 114, 206);
   --gray-dark: rgb(99, 101, 105);

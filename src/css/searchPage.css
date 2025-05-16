@@ -1,0 +1,192 @@
+#search-result {
+  width: 100%;
+  padding: 50px 0 8px 0;
+  font-size: 24px;
+  font-weight: var(--bold);
+}
+
+.category-btns-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.category-table-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  border: 1px solid var(--gray-cool);
+  margin-top: -1px;
+}
+
+.category-name {
+  display: flex;
+  flex: 0 0 120px;
+  box-sizing: border-box;
+  background-color: #f7f7f8;
+  border-right: 1px solid var(--gray-cool);
+  font-size: 14px;
+  font-weight: var(--medium);
+}
+
+.category-btns-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: fit-content;
+  gap: 10px;
+}
+
+#firstCategory .category-btns-container {
+  padding: 0 20px;
+}
+
+#secondCategory .category-btns-container {
+  padding: 0 20px;
+  overflow-x: auto;
+}
+
+#thirdCategory .category-btns-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.category-btn {
+  min-width: fit-content;
+  padding: 10px 20px;
+  color: #000;
+  font-size: 14px;
+  font-weight: var(--light);
+}
+
+#secondCategory .category-btn {
+  scroll-snap-align: start;
+}
+
+#thirdCategory .category-btn {
+  width: 100%;
+  padding: 18px 24px;
+  border: 1px solid #f7f7f8;
+  text-align: start;
+  box-sizing: border-box;
+}
+
+/* 나중에 삭제 */
+.category-btn:hover {
+  color: var(--blue-light);
+  font-weight: var(--medium);
+}
+
+#category-result {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: start;
+  gap: 8px;
+}
+
+.category-items-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  background-color: var(--blue);
+  padding: 4px 8px 4px 16px;
+  border-radius: 24px;
+}
+
+.category-item {
+  color: #fff;
+  font-size: 14px;
+  font-weight: var(--light);
+}
+
+.category-item-del-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-search-products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 30px;
+}
+
+#totalProduct {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.order-by-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.order-by {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: var(--light);
+}
+
+/* 나중에 삭제 */
+.order-by:hover {
+  font-weight: var(--medium);
+}
+
+.product-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px 32px;
+  margin-bottom: 50px;
+}
+
+.product-img-container {
+  justify-content: space-between;
+  align-items: s;
+  width: 100%;
+  position: relative;
+  aspect-ratio: 1/1;
+  border: 1px solid #000;
+  border-radius: 12px;
+  background-image: url("../img/products/data-structure.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sold-out {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: fit-content;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: var(--bold);
+  background-color: #fff;
+}
+
+.like-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-image: url("../img/icon/heart-empty.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+}
+/* 나중에 삭제 */
+.like-btn:focus {
+  background-image: url("../img/icon/heart-fill.svg");
+}

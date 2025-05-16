@@ -1,6 +1,7 @@
 :root {
   /* 폰트 굵기 */
   --light: 300;
+  --demi-light: 400;
   --medium: 500;
   --bold: 700;
   /* 색상 */

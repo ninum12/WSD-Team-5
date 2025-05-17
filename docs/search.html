@@ -6,6 +6,7 @@
     <title>송이 장터</title>
     <link rel="stylesheet" href="./css/wholeSetting.css" />
     <link rel="stylesheet" href="./css/searchPage.css" />
+    <link rel="stylesheet" href="./css/productsList.css" />
   </head>
   <body>
     <div class="whole-container">
@@ -24,8 +25,12 @@
             />
           </button>
           <div class="search-bar">
-            <input placeholder="검색어를 입력해주세요." />
-            <button class="search-btn" onclick="location.href='./search.html'">
+            <input id="search-input" placeholder="검색어를 입력해주세요." />
+            <button
+              class="search-btn"
+              id="searchBtn"
+              onclick="location.href='./search.html'"
+            >
               <img src="./img/icon/search-icon.png" />
             </button>
           </div>
@@ -112,69 +117,14 @@
         <div class="about-search-products">
           <div id="totalProduct">총 0개</div>
           <ul class="order-by-container">
-            <li class="order-by">관련도순</li>
-            <li class="order-by">최신순</li>
-            <li class="order-by">낮은 가격순</li>
-            <li class="order-by">높은 가격순</li>
+            <li class="order-by" data-sort="default" style="font-weight: 500">
+              기본순
+            </li>
+            <li class="order-by" data-sort="low-to-high">낮은 가격순</li>
+            <li class="order-by" data-sort="high-to-low">높은 가격순</li>
           </ul>
         </div>
-        <div class="product-list">
-          <div class="product-container">
-            <div class="product-img-container">
-              <div class="sold-out">판매완료</div>
-              <button class="like-btn"></button>
-            </div>
-            <div class="product-text-container">
-              <div class="product-name">자료구조</div>
-              <div class="product-price">30,000</div>
-              <div class="product-seller">송이</div>
-            </div>
-          </div>
-          <div class="product-container">
-            <div class="product-img-container">
-              <div class="sold-out">판매완료</div>
-              <button class="like-btn"></button>
-            </div>
-            <div class="product-text-container">
-              <div class="product-name">자료구조</div>
-              <div class="product-price">30,000</div>
-              <div class="product-seller">송이</div>
-            </div>
-          </div>
-          <div class="product-container">
-            <div class="product-img-container">
-              <div class="sold-out">판매완료</div>
-              <button class="like-btn"></button>
-            </div>
-            <div class="product-text-container">
-              <div class="product-name">자료구조</div>
-              <div class="product-price">30,000</div>
-              <div class="product-seller">송이</div>
-            </div>
-          </div>
-          <div class="product-container">
-            <div class="product-img-container">
-              <div class="sold-out">판매완료</div>
-              <button class="like-btn"></button>
-            </div>
-            <div class="product-text-container">
-              <div class="product-name">자료구조</div>
-              <div class="product-price">30,000</div>
-              <div class="product-seller">송이</div>
-            </div>
-          </div>
-          <div class="product-container">
-            <div class="product-img-container">
-              <div class="sold-out">판매완료</div>
-              <button class="like-btn"></button>
-            </div>
-            <div class="product-text-container">
-              <div class="product-name">자료구조</div>
-              <div class="product-price">30,000</div>
-              <div class="product-seller">송이</div>
-            </div>
-          </div>
-        </div>
+        <div class="product-list"></div>
       </main>
     </div>
     <footer>
@@ -185,5 +135,15 @@
         <div>이다빈</div>
       </div>
     </footer>
+    <script src="./database/productData.js"></script>
+    <script src="./js/productsRender.js"></script>
+    <script src="./js/favorites.js"></script>
+    <script src="./js/productNavigation.js"></script>
+    <script src="./js/searchResults.js"></script>
+    <script src="./js/sortProducts.js"></script>
+    <script src="./js/searchBar.js"></script>
+    <script>
+      renderSearchResults();
+    </script>
   </body>
 </html>

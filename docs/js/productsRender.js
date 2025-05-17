@@ -1,6 +1,6 @@
 function renderProductList(products) {
   const container = document.querySelector(".product-list");
-  container.innerHTML = ""; // 기존 내용 제거
+  container.innerHTML = "";
 
   products.forEach((product) => {
     const productEl = document.createElement("div");

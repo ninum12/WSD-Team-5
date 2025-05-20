@@ -23,4 +23,4 @@ function renderProductList(products) {
   });
 }
 
-renderProductList(products);
+renderProductList(PRODUCTS_LIST);

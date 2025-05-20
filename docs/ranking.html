@@ -1,1 +1,177 @@
-랭킹
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>송이 장터</title>
+    <link rel="stylesheet" href="./css/wholeSetting.css" />
+    <link rel="stylesheet" href="./css/banner.css" />
+    <style>
+      .first .user-icon,
+      .second .user-icon,
+      .third .user-icon {
+        width: 150px;
+        border-radius: 0%;
+        border: 20px solid var(--blue--light);
+      }
+
+      .first,
+      .second,
+      .third {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 3px;
+      }
+
+      .rank {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      main {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        padding: 0px;
+      }
+
+      main h1 {
+        margin-top: 13px;
+      }
+
+      .name {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .chattingButton {
+        display: flex;
+        margin: 0px 0px 0px 35vw;
+        background-color: rgb(0, 114, 206);
+        color: white;
+        width: 100px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+      }
+
+      .line {
+        height: 1px;
+        background-color: gray;
+        width: 100%;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="whole-container">
+      <header>
+        <div class="top-nav-container">
+          <li><a href="./login.html">로그인</a></li>
+          <li><a href="./login.html">회원가입</a></li>
+          <li><a href="./inquiry.html">고객센터</a></li>
+        </div>
+        <div class="container">
+          <button onclick="location.href='./home.html'">
+            <img
+              class="logo-img"
+              src="./img/icon/songteo.png"
+              alt="송이 장터"
+            />
+          </button>
+          <div class="search-bar">
+            <input id="search-input" placeholder="검색어를 입력해주세요." />
+            <button class="search-btn" id="searchBtn">
+              <img src="./img/icon/search-icon.png" />
+            </button>
+          </div>
+          <div class="login-nav-container">
+            <li><a href="./sale.html">판매하기</a></li>
+            <li><a href="./like.html">찜</a></li>
+            <button
+              class="to-user-page"
+              onclick="location.href='./mypage.html'"
+            >
+              <img class="user-icon" src="./img/user/user-example.png" />
+            </button>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./about.html">서비스소개</a></li>
+            <li><a href="./search.html">무료나눔</a></li>
+            <li><a href="./ranking.html">랭킹</a></li>
+            <li><a href="./service.html">공지사항</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>랭킹</h1>
+        <div class="line"></div>
+        <div class="first">
+          <div class="rank">1</div>
+          <img class="user-icon" src="./img/user/user-example.png" />
+          <div class="leftSide">
+            <div class="name">눈송이</div>
+            <div class="numberOfTransactions">거래 횟수: 17번</div>
+          </div>
+          <div class="rightSide">
+            <div class="chattingButton">
+              <button onclick="location.href='./chatting.html'">
+                채팅하기
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="second">
+          <div class="rank">2</div>
+          <img class="user-icon" src="./img/user/user-example.png" />
+          <div class="leftSide">
+            <div class="name">꽃송이</div>
+            <div class="numberOfTransactions">거래 횟수: 12번</div>
+          </div>
+          <div class="rightSide">
+            <div class="chattingButton">
+              <button onclick="location.href='./chatting.html'">
+                채팅하기
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="third">
+          <div class="rank">3</div>
+          <img class="user-icon" src="./img/user/user-example.png" />
+          <div class="leftSide">
+            <div class="name">눈결이</div>
+            <div class="numberOfTransactions">거래 횟수: 9번</div>
+          </div>
+          <div class="rightSide">
+            <div class="chattingButton">
+              <button onclick="location.href='./chatting.html'">
+                채팅하기
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="team"><b>5조</b></div>
+        <div>방지희</div>
+        <div>신정은</div>
+        <div>이다빈</div>
+      </div>
+    </footer>
+    <script src="./js/searchBar.js"></script>
+  </body>
+</html>

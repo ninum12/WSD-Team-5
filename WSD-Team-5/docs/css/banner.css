@@ -1,0 +1,78 @@
+* {
+  justify-content: center;
+  align-items: center;
+}
+
+main .container {
+  padding: 20px 0;
+}
+
+.slide-banners-container {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--gray-light);
+}
+
+.banner-wrapper {
+  display: flex;
+  justify-content: start;
+  transition: transform 0.5s ease-in-out;
+}
+
+.banner {
+  flex: 0 0 100%;
+  aspect-ratio: 16/9;
+  background: #eee;
+  display: flex;
+  user-select: none;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  z-index: 1;
+  user-select: none;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.banner-left-btn {
+  left: 10px;
+}
+
+.banner-right-btn {
+  right: 10px;
+}
+
+.banners-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 1;
+}
+
+.banners-pagination li {
+  width: 8px;
+  height: 8px;
+  background-color: var(--gray-light);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.banners-pagination li.active {
+  background-color: var(--gray-dark);
+}

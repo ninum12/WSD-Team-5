@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>송이 장터</title>
+    <link rel="stylesheet" href="./css/wholeSetting.css" />
+    <link rel="stylesheet" href="./css/searchPage.css" />
+    <link rel="stylesheet" href="./css/productsList.css" />
+  </head>
+  <body>
+    <div class="whole-container">
+      <header>
+        <div class="top-nav-container">
+          <li><a href="./login.html">로그인</a></li>
+          <li><a href="./login.html">회원가입</a></li>
+          <li><a href="./inquiry.html">고객센터</a></li>
+        </div>
+        <div class="container">
+          <button onclick="location.href='./home.html'">
+            <img
+              class="logo-img"
+              src="./img/icon/songteo.png"
+              alt="송이 장터"
+            />
+          </button>
+          <div class="search-bar">
+            <input id="search-input" placeholder="검색어를 입력해주세요." />
+            <button
+              class="search-btn"
+              id="searchBtn"
+              onclick="location.href='./search.html'"
+            >
+              <img src="./img/icon/search-icon.png" />
+            </button>
+          </div>
+          <div class="login-nav-container">
+            <li><a href="./sellproduct.html">판매하기</a></li>
+            <li><a href="./like.html">찜</a></li>
+            <button
+              class="to-user-page"
+              onclick="location.href='./mypage.html'"
+            >
+              <img class="user-icon" src="./img/user/user-example.png" />
+            </button>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./about.html">서비스소개</a></li>
+            <li><a href="./search.html">무료나눔</a></li>
+            <li><a href="./ranking.html">랭킹</a></li>
+            <li><a href="./service.html">공지사항</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="search-result">"검색어" 검색 결과</div>
+        <div class="category-btns-table">
+          <div id="firstCategory" class="category-table-row">
+            <div class="category-name">카테고리</div>
+            <div class="category-btns-container">
+              <button class="category-btn">교재</button>
+              <button class="category-btn">학잠/과잠</button>
+              <button class="category-btn">학교 굿즈</button>
+            </div>
+          </div>
+          <div id="secondCategory" class="category-table-row">
+            <div class="category-name">대학</div>
+            <div class="category-btns-container">
+              <button class="category-btn">문과</button>
+              <button class="category-btn">이과</button>
+              <button class="category-btn">공과</button>
+              <button class="category-btn">생활과학</button>
+              <button class="category-btn">사회과학</button>
+              <button class="category-btn">법과</button>
+              <button class="category-btn">경상</button>
+              <button class="category-btn">음악</button>
+              <button class="category-btn">약학</button>
+              <button class="category-btn">미술</button>
+              <button class="category-btn">순헌칼리지</button>
+              <button class="category-btn">글로벌융합</button>
+              <button class="category-btn">글로벌서비스학부</button>
+              <button class="category-btn">영어영문학부</button>
+              <button class="category-btn">미디어학부</button>
+            </div>
+          </div>
+          <div id="thirdCategory" class="category-table-row">
+            <div class="category-name">학과</div>
+            <div class="category-btns-container">
+              <button class="category-btn">한국어문학부</button>
+              <button class="category-btn">역사문화학과</button>
+              <button class="category-btn">프랑스언어문화학과</button>
+              <button class="category-btn">중어중문학부</button>
+              <button class="category-btn">독일언어문화학과</button>
+              <button class="category-btn">일본학과</button>
+              <button class="category-btn">문헌관광학전공</button>
+              <button class="category-btn">르꼬르동블루</button>
+              <button class="category-btn">교육학부</button>
+            </div>
+          </div>
+        </div>
+        <div id="category-result">
+          <div class="category-items-container">
+            <div class="category-item">교재</div>
+            <button class="category-item-del-btn">
+              <img src="./img/icon/category-del-icon.png" />
+            </button>
+          </div>
+          <div class="category-items-container">
+            <div class="category-item">교재</div>
+            <button class="category-item-del-btn">
+              <img src="./img/icon/category-del-icon.png" />
+            </button>
+          </div>
+        </div>
+        <div class="about-search-products">
+          <div id="totalProduct">총 0개</div>
+          <ul class="order-by-container">
+            <li class="order-by" data-sort="default" style="font-weight: 500">
+              기본순
+            </li>
+            <li class="order-by" data-sort="low-to-high">낮은 가격순</li>
+            <li class="order-by" data-sort="high-to-low">높은 가격순</li>
+          </ul>
+        </div>
+        <div class="product-list"></div>
+      </main>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="team"><b>5조</b></div>
+        <div>방지희</div>
+        <div>신정은</div>
+        <div>이다빈</div>
+      </div>
+    </footer>
+    <script src="./database/productData.js"></script>
+    <script src="./js/productsRender.js"></script>
+    <script src="./js/favorites.js"></script>
+    <script src="./js/productNavigation.js"></script>
+
+    <!-- <script src="./js/sortProducts.js"></script> -->
+    <script src="./js/searchResults.js"></script>
+    <script src="./js/searchBar.js"></script>
+    <script>
+      renderSearchResults();
+    </script>
+  </body>
+</html>

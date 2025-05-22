@@ -1,0 +1,121 @@
+:root {
+  --light: 300;
+  --demi-light: 400;
+  --medium: 500;
+  --bold: 700;
+
+  --blue: rgb(0, 48, 135);
+  --blue-light: rgb(0, 114, 206);
+  --gray-dark: rgb(99, 101, 105);
+  --gray-cool: rgb(151, 153, 155);
+  --gray-light: rgb(217, 217, 214);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 70vh;
+  padding: 40px 20px;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px 30px;
+  background-color: #fff;
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.login-box h1 {
+  font-size: 28px;
+  font-weight: var(--bold);
+  text-align: center;
+  color: #000;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-area input {
+  width: 100%;
+  max-width: 93%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 1px solid var(--gray-cool);
+  border-radius: 6px;
+}
+
+.login-btn {
+  width: 100%;
+  max-width: 93%;
+  padding: 14px;
+  background-color: var(--gray-dark);
+  color: white;
+  font-size: 16px;
+  font-weight: var(--medium);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.sub-btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sub-btns button {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  background-color: white;
+  border: 1px solid var(--gray-cool);
+  font-size: 14px;
+  font-weight: var(--demi-light);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--gray-dark);
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .sub-btns {
+    flex-direction: column;
+  }
+
+  .sub-btns button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,79 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px 0;
+  justify-content: flex-start;
+}
+
+.product-container {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: sans-serif;
+}
+
+.product-img-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  border: 1px solid #000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sold-out {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.like-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  background-image: url('../img/icon/heart-empty.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.like-btn.liked {
+  background-image: url('../img/icon/heart-fill.svg');
+}
+
+.product-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-seller {
+  font-size: 12px;
+  color: #555;
+}

@@ -1,14 +1,44 @@
 const defaultUsers = [
-  { id: "admin", pw: "admin123", name: "관리자", role: "admin" },
-  { id: "user1", pw: "user123", name: "눈송이", role: "user" },
-  { id: "user2", pw: "abcd", name: "눈결이", role: "user" }
+  {
+    id: "admin",
+    pw: "admin123",
+    name: "관리자",
+    role: "admin"
+  },
+  {
+    id: "user1",
+    pw: "user123",
+    name: "눈송이",
+    role: "user",
+    studentId: "2412345",
+    major: "컴퓨터과학전공",
+    activities: {
+      sold: ["빨간 니트", "블루투스 이어폰"],
+      bought: ["자료구조 교재", "캠퍼스 노트"]
+    },
+    liked: ["아이폰 케이스", "미니 선풍기"],
+    drafts: ["운영체제 교재 글", "스탠드 조명 글"]
+  },
+  {
+    id: "user2",
+    pw: "abcd",
+    name: "눈결이",
+    role: "user",
+    studentId: "2311122",
+    major: "데이터사이언스전공",
+    activities: {
+      sold: [],
+      bought: ["키보드", "필통"]
+    },
+    liked: ["무드등", "눈송이 인형"],
+    drafts: []
+  }
 ];
 
 if (!localStorage.getItem("users")) {
   localStorage.setItem("users", JSON.stringify(defaultUsers));
 }
 
-// 로그인 (isAdmin = true: 관리자 로그인 버튼을 누른 경우)
 function login(isAdmin = false) {
   const id = document.getElementById("userId").value.trim();
   const pw = document.getElementById("password").value.trim();
@@ -38,7 +68,15 @@ function login(isAdmin = false) {
     return;
   }
 
+  // 로그인한 사용자 ID 저장
+  localStorage.setItem("loggedInUserId", matchedUser.id);
+
   alert(`${matchedUser.name}님, 로그인 성공!`);
-  // 로그인 성공 후 페이지 이동
-  // location.href = matchedUser.role === "admin" ? "./admin.html" : "./mypage.html";
+
+  // 페이지 이동
+  if (isAdmin) {
+    location.href = "./admin.html";
+  } else {
+    location.href = "./mypage.html";
+  }
 }

@@ -1,0 +1,130 @@
+:root {
+  --bold: 700;
+  --demi-light: 400;
+  --gray-dark: #333;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: var(--bold);
+}
+
+.wishlist-section {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.wishlist-section p {
+  font-size: 14px;
+  color: var(--gray-dark);
+}
+
+.product-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  justify-content: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  gap: 10px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.product-img-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #000;
+  border-radius: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sold-out {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: var(--bold);
+  background-color: #fff;
+}
+
+.like-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+
+.product-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: var(--demi-light);
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: var(--bold);
+}
+
+.product-seller {
+  font-size: 10px;
+  font-weight: var(--demi-light);
+  color: var(--gray-dark);
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .product-container {
+    min-width: 160px;
+    padding: 4px;
+  }
+
+  .like-btn {
+    width: 32px;
+    height: 32px;
+    background-size: 20px 20px;
+  }
+}

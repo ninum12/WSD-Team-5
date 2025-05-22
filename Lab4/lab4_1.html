@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2411790 신정은</title>
+</head>
+<body>
+    <div id="result"></div>
+  
+    <script>
+      function grade(score) {
+        if (score >= 90) return 'A';
+        else if (score >= 80) return 'B';
+        else if (score >= 70) return 'C';
+        else if (score >= 60) return 'D';
+        else return 'F';
+      }
+  
+      let input = prompt("점수를 입력하세요");
+      let score = parseFloat(input);
+  
+      if (isNaN(score) || score < 0 || score > 100) {
+        document.getElementById('result').innerHTML = "올바른 점수를 입력해주세요.";
+      } else {
+        let resultGrade = grade(score);
+        document.getElementById('result').innerHTML = `<h2>입력한 점수 ${score}는 ${resultGrade} 학점입니다.</h2>`;
+      }
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2411790 신정은</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        name = prompt("이름을 입력하세요.");
+        rs = confirm("당신의 이름은 " + name + " 입니까?");
+        if (rs == true) {
+            document.getElementById("result").innerHTML = "환영합니다 "+name+"님"
+        } else {
+            document.getElementById("result").innerHTML = "이름을 다시 입력하세요"
+        }
+        function test(){
+            console.log(a); // a의 값은 알지 못하지만 a의 존재는 알고 있음
+            console.log(b); // 
+            let b = 3;
+            if(1 == 1){
+                var a = 1;
+                let b = 2;
+                console.log("if 블럭 안" + b);
+                var a = 5; // 재선언 가능
+                
+            }
+            let b = 6; // 동일 영역 내에서 재선언 불가능
+            console.log(a);
+            console.log(b);
+        }
+        test();
+    </script>
+</body>
+</html>

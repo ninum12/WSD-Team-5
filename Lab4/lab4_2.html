@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2411790 신정은</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+      window.onload = function() {
+        let messages = function(msg, count) {
+          let output = '';
+          for (let i = 0; i < count; i++) {
+            output += msg + "<br>";
+          }
+          document.getElementById('result').innerHTML = output;
+        };
+  
+        let userMsg = prompt("반복할 메세지를 입력하시오.");
+        let userCount = prompt("몇 번 반복할까요?");
+        userCount = parseInt(userCount);
+  
+        if (!userMsg || isNaN(userCount) || userCount <= 0) {
+          document.getElementById('result').innerHTML = "올바른 메시지와 숫자를 입력하시오.";
+        } else {
+          messages(userMsg, userCount);
+        }
+      }
+    </script>
+  </body>
+  </html> 

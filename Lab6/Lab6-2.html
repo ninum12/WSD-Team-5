@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>2411790 신정은</title>
+  <style>
+    .list li {
+      cursor: pointer;
+    }
+    .list li:hover:after,
+    .list li.fav:after {
+      content: ' \2605';
+      color: rgb(155, 203, 125);
+    }
+    .list li.fav:hover:after {
+      content: ' \2606';
+    }
+  </style>
+</head>
+<body>
+
+<ul class="list">
+  <li id="pancakes">Pancakes</li>
+  <li id="donuts">Donuts</li>
+  <li id="cupcakes">Cupcakes</li>
+  <li id="icecream">Icecream</li>
+  <li id="cookies">Cookies</li>
+  <li id="chocolate">Chocolate</li>
+</ul>
+
+<script>
+  var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+  favorites.forEach(function(favorite) {
+    document.getElementById(favorite).className = 'fav';
+  });
+
+  document.querySelector('.list').addEventListener('click', function(e) {
+    var id = e.target.id;
+    var item = e.target;
+    var index = favorites.indexOf(id);
+
+    if (index === -1) {
+      favorites.push(id);
+      item.className = 'fav';
+    } else {
+      favorites.splice(index, 1);
+      item.className = '';
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  });
+</script>
+
+</body>
+</html>

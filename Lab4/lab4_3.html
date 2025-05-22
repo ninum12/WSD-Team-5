@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2411790 신정은</title>
+</head>
+<body>
+    <div id="result"></div>
+  
+    <script>
+      let userName = prompt("이름을 입력하시오");
+      let ageInput = prompt("나이를 입력하시오(숫자)");
+      let heightInput = prompt("키를 입력하시오(숫자)");
+      let weightInput = prompt("체중을 입력하시오(숫자)");
+
+      let age = parseInt(ageInput);
+      let heightCm = parseFloat(heightInput);
+      let weight = parseFloat(weightInput);
+
+      if (!userName || isNaN(age) || isNaN(heightCm) || isNaN(weight) || age <= 0 || heightCm <= 0 || weight <= 0) {
+        document.getElementById('result').innerHTML = "올바른 이름, 나이, 키, 체중을 입력하시오.";
+      } else {
+        let heightM = heightCm / 100;
+        let kauffIndex = weight / (heightM * heightM);
+
+        let bodyStatus = "";
+
+        if (age >= 20 && age < 30) {
+          if (kauffIndex <= 17.9) bodyStatus = "저체중";
+          else if (kauffIndex <= 23) bodyStatus = "표준체중";
+          else if (kauffIndex <= 30) bodyStatus = "과체중";
+          else bodyStatus = "비만";
+        } else if (age >= 30 && age < 40) {
+          if (kauffIndex <= 18.4) bodyStatus = "저체중";
+          else if (kauffIndex <= 24) bodyStatus = "표준체중";
+          else if (kauffIndex <= 30) bodyStatus = "과체중";
+          else bodyStatus = "비만";
+        } else {
+          bodyStatus = "20대 또는 30대만 가능합니다.";
+        }
+
+        if (bodyStatus === "20대 또는 30대만 가능합니다.") {
+          document.getElementById('result').innerHTML = `<h2>${bodyStatus}</h2>`;
+        } else {
+          document.getElementById('result').innerHTML =
+          `<h2>이름: ${userName}</h2>`+
+          `<h2>나이: ${age}세</h2>` +
+          `<h2>키: ${heightCm}cm</h2>` +
+          `<h2>체중: ${weight}kg</h2>` +
+          `<h2>당신은 ${bodyStatus} (${kauffIndex})입니다.<h2>`;
+        }
+      }
+    </script>
+</body>
+</html>

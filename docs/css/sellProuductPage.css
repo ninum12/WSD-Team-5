@@ -7,10 +7,6 @@ textarea {
   all: unset;
 }
 
-input {
-  all: revert;
-}
-
 form {
   width: 100%;
 }
@@ -178,6 +174,12 @@ input[type="file"] {
 
 .category {
   cursor: pointer;
+}
+
+.radio-container input,
+.preferred-methods-wrapper input,
+.in-person-wrapper input {
+  all: revert;
 }
 
 #productConditionArea .form-input {

@@ -51,89 +51,171 @@
         </nav>
       </header>
       <main>
-        <div class="sell-product-title">상품정보</div>
-        <div class="each-form-wrapper">
-          <div class="form-name">
-            <div>상품이미지</div>
-            <div id="countImg">(2/5)</div>
-          </div>
-          <div class="form-input">
-            <div class="upload-area" id="uploadArea">
-              <div class="add-button" id="addButton">+</div>
-              <input type="file" id="fileInput" accept="image/*" />
-            </div>
-            <div class="caption-add-img">
-              상품 이미지 등록은 최대 5개까지 가능합니다.
-            </div>
-          </div>
-        </div>
-        <div class="each-form-wrapper">
-          <div class="form-name">상품명</div>
-          <div class="form-input product-name-wrapper">
-            <input id="productName" placeholder="상품명을 입력해 주세요." />
-            <div id="countWord">0/40</div>
-          </div>
-        </div>
-        <div class="each-form-wrapper">
-          <div class="form-name">카테고리</div>
-          <div class="form-input">
-            <div id="categoryArea">
-              <div id="firstCategory" class="category-table-column">
-                <div class="category-btns-container">
-                  <button class="category-btn">교재</button>
-                  <button class="category-btn">학잠/과잠</button>
-                  <button class="category-btn">학교 굿즈</button>
-                  <button class="category-btn">무료 나눔</button>
-                </div>
+        <form>
+          <div class="sell-product-title">상품정보</div>
+          <div class="each-form-wrapper">
+            <div class="form-name">상품이미지</div>
+            <div class="form-input">
+              <div class="upload-area" id="uploadArea">
+                <div class="add-button" id="addButton">+</div>
+                <input type="file" id="fileInput" accept="image/*" />
               </div>
-              <div id="secondCategory" class="category-table-column">
-                <div class="category-btns-container">
-                  <button class="category-btn">문과</button>
-                  <button class="category-btn">이과</button>
-                  <button class="category-btn">공과</button>
-                  <button class="category-btn">생활과학</button>
-                  <button class="category-btn">사회과학</button>
-                  <button class="category-btn">법과</button>
-                  <button class="category-btn">경상</button>
-                  <button class="category-btn">음악</button>
-                  <button class="category-btn">약학</button>
-                  <button class="category-btn">미술</button>
-                  <button class="category-btn">순헌칼리지</button>
-                  <button class="category-btn">글로벌융합</button>
-                  <button class="category-btn">글로벌서비스학부</button>
-                  <button class="category-btn">영어영문학부</button>
-                  <button class="category-btn">미디어학부</button>
-                </div>
-              </div>
-              <div id="thirdCategory" class="category-table-column">
-                <div class="category-btns-container">
-                  <button class="category-btn">한국어문학부</button>
-                  <button class="category-btn">역사문화학과</button>
-                  <button class="category-btn">프랑스언어문화학과</button>
-                  <button class="category-btn">중어중문학부</button>
-                  <button class="category-btn">독일언어문화학과</button>
-                  <button class="category-btn">일본학과</button>
-                  <button class="category-btn">문헌관광학전공</button>
-                  <button class="category-btn">르꼬르동블루</button>
-                  <button class="category-btn">교육학부</button>
-                </div>
+              <div class="caption-add-img">
+                상품 이미지 등록은 최대 5개까지 가능합니다.
               </div>
             </div>
-            <div id="category-results">
-              <div>선택한 카테고리:</div>
-              <div class="category">교재,</div>
-              <div class="category">공과,</div>
+          </div>
+          <div class="each-form-wrapper">
+            <div class="form-name">상품명</div>
+            <div class="form-input product-name-wrapper">
+              <input
+                id="productName"
+                class="text-input-box"
+                placeholder="상품명을 입력해 주세요."
+                required
+              />
+              <div id="countWordName" class="countWord">0/40</div>
             </div>
           </div>
-        </div>
-        <div class="each-form-wrapper">
-          <div class="form-name">상품상태</div>
-          <div class="form-input" id=""></div>
-        </div>
-        <div class="each-form-wrapper">
-          <div class="form-name"></div>
-          <div class="form-input" id=""></div>
-        </div>
+          <div class="each-form-wrapper">
+            <div class="form-name">카테고리</div>
+            <div class="form-input">
+              <div id="categoryArea">
+                <div id="firstCategory" class="category-table-column">
+                  <div class="category-btns-container">
+                    <button class="category-btn">교재</button>
+                    <button class="category-btn">학잠/과잠</button>
+                    <button class="category-btn">학교 굿즈</button>
+                    <button class="category-btn">무료 나눔</button>
+                  </div>
+                </div>
+                <div id="secondCategory" class="category-table-column">
+                  <div class="category-btns-container">
+                    <button class="category-btn">문과</button>
+                    <button class="category-btn">이과</button>
+                    <button class="category-btn">공과</button>
+                    <button class="category-btn">생활과학</button>
+                    <button class="category-btn">사회과학</button>
+                    <button class="category-btn">법과</button>
+                    <button class="category-btn">경상</button>
+                    <button class="category-btn">음악</button>
+                    <button class="category-btn">약학</button>
+                    <button class="category-btn">미술</button>
+                    <button class="category-btn">순헌칼리지</button>
+                    <button class="category-btn">글로벌융합</button>
+                    <button class="category-btn">글로벌서비스학부</button>
+                    <button class="category-btn">영어영문학부</button>
+                    <button class="category-btn">미디어학부</button>
+                  </div>
+                </div>
+                <div id="thirdCategory" class="category-table-column">
+                  <div class="category-btns-container">
+                    대학을 먼저 선택해주세요
+                  </div>
+                </div>
+              </div>
+              <div id="category-results">
+                <div>선택한 카테고리:</div>
+              </div>
+            </div>
+          </div>
+          <div class="each-form-wrapper" id="productConditionArea">
+            <div class="form-name">상품 상태</div>
+            <div class="form-input">
+              <div class="condition-name">사용 횟수</div>
+              <div class="radio-container">
+                <label
+                  ><input type="radio" name="use" value="new" checked />
+                  없음</label
+                >
+                <label
+                  ><input type="radio" name="use" value="almost-new" />
+                  1~2회</label
+                >
+                <label
+                  ><input type="radio" name="use" value="often" />3회 이상
+                </label>
+              </div>
+
+              <div class="condition-name">손상 여부</div>
+              <div class="radio-container">
+                <label
+                  ><input type="radio" name="damage" value="no" checked />
+                  없음</label
+                >
+                <label
+                  ><input type="radio" name="damage" value="yes" /> 있음</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="each-form-wrapper">
+            <div class="form-name">설명</div>
+            <div class="form-input product-description-wrapper">
+              <textarea
+                id="productDescription"
+                class="text-input-box"
+                placeholder="상품에 대한 설명을 자세히 적어주세요."
+                maxlength="2000"
+                rows="6"
+                required
+              ></textarea>
+              <div id="countWordDescription" class="countWord">0/2000</div>
+            </div>
+          </div>
+          <div class="sell-product-title">가격</div>
+          <div class="each-form-wrapper">
+            <div class="form-name">가격</div>
+            <div class="form-input price-input-wrapper">
+              <input
+                type="text"
+                id="productPrice"
+                class="text-input-box"
+                placeholder="가격을 입력해 주세요"
+                value="0"
+                data-max="999999999"
+                required
+              />
+              <span class="unit">원</span>
+            </div>
+          </div>
+          <div class="sell-product-title">거래방법</div>
+          <div class="each-form-wrapper">
+            <div class="form-name">선호방법</div>
+            <div class="form-input preferred-methods-wrapper">
+              <label>
+                <input type="checkbox" name="preferredMethod" value="locker" />
+                사물함
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="preferredMethod"
+                  value="in-person"
+                />
+                직거래
+              </label>
+            </div>
+          </div>
+          <div class="sell-product-title">추가정보</div>
+          <div class="each-form-wrapper">
+            <div class="form-name">직거래</div>
+            <div class="form-input in-person-wrapper">
+              <label>
+                <input type="radio" name="inPerson" value="yes" checked />
+                가능
+              </label>
+              <label>
+                <input type="radio" name="inPerson" value="no" />
+                불가능
+              </label>
+            </div>
+          </div>
+          <div class="submit-button-area">
+            <button id="saveBtn" type="button">임시저장</button>
+            <button id="registerBtn" type="submit">등록하기</button>
+          </div>
+        </form>
       </main>
     </div>
     <footer>
@@ -147,5 +229,11 @@
     <script src="./js/searchBar.js"></script>
     <script src="./js/goToMypage.js"></script>
     <script src="./js/imageUpload.js"></script>
+    <script src="./js/countWord.js"></script>
+    <script src="./database/thirdCategory.js"></script>
+    <script src="./js/categoryOptions.js"></script>
+    <script src="./js/productCondition.js"></script>
+    <script src="./js/formatPrice.js"></script>
+    <script src="./js/saveProduct.js"></script>
   </body>
 </html>

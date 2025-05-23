@@ -4,17 +4,19 @@ function renderProductList(products) {
 
   products.forEach((product) => {
     const productEl = document.createElement("div");
-    productEl.className = "product-container";
+    productEl.className = "product-card";
     productEl.dataset.id = product.id;
 
     productEl.innerHTML = `
-      <div class="product-img-container">
+      <div class="product-img-container" style="background-image: url('${
+        product.img
+      }');">
         ${product.soldOut ? '<div class="sold-out">판매완료</div>' : ""}
         <button class="like-btn"></button>
       </div>
       <div class="product-text-container">
         <div class="product-name">${product.name}</div>
-        <div class="product-price">${product.price.toLocaleString()}원</div>
+        <div class="product-price">${product.price}원</div>
         <div class="product-seller">${product.seller}</div>
       </div>
     `;

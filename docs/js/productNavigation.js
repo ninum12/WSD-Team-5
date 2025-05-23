@@ -1,5 +1,5 @@
 function bindFavoriteEvents() {
-  document.querySelectorAll(".product-container").forEach((p) => {
+  document.querySelectorAll(".product-card").forEach((p) => {
     const productId = p.dataset.id;
     const likeBtn = p.querySelector(".like-btn");
 

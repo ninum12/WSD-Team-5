@@ -1,11 +1,11 @@
-const FAVORITES_KEY = "favorites";
+const WISHLIST_KEY = "wishlist";
 
-function getFavorites() {
-  return JSON.parse(localStorage.getItem(FAVORITES_KEY)) || [];
+function getWishList() {
+  return JSON.parse(localStorage.getItem(WISHLIST_KEY)) || [];
 }
 
-function setFavorites(favorites) {
-  localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+function setWishList(wishList) {
+  localStorage.setItem(WISHLIST_KEY, JSON.stringify(wishList));
 }
 
 function setHeartIcon(likeBtn, isLiked) {
@@ -15,29 +15,29 @@ function setHeartIcon(likeBtn, isLiked) {
 }
 
 function toggleFavorite(productId, likeBtn) {
-  let favorites = getFavorites();
-  const index = favorites.indexOf(productId);
+  let wishList = getWishList();
+  const index = wishList.indexOf(productId);
 
   if (index == -1) {
-    favorites.push(productId);
+    wishList.push(productId);
   } else {
-    favorites.splice(index, 1);
+    wishList.splice(index, 1);
   }
 
-  setFavorites(favorites);
+  setWishList(wishList);
   setHeartIcon(likeBtn, !(index > -1));
 }
 
-function applyFavorites() {
-  const favorites = getFavorites();
+function applyWishList() {
+  const wishList = getWishList();
 
-  document.querySelectorAll(".product-container").forEach((p) => {
+  document.querySelectorAll(".product-card").forEach((p) => {
     const productId = p.dataset.id;
     const likeBtn = p.querySelector(".like-btn");
-    const isLiked = favorites.includes(productId);
+    const isLiked = wishList.includes(productId);
 
     setHeartIcon(likeBtn, isLiked);
   });
 }
 
-applyFavorites();
+applyWishList();

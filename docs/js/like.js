@@ -1,42 +1,3 @@
-const sampleWishlist = [
-  {
-    id: 1,
-    name: "자료구조",
-    price: "30,000원",
-    seller: "송이",
-    img: "./img/products/data-structure.jpg",
-    soldOut: false
-  },
-  {
-    id: 2,
-    name: "운영체제",
-    price: "35,000원",
-    seller: "송이",
-    img: "./img/products/os.jpg",
-    soldOut: true
-  },
-  {
-    id: 3,
-    name: "네트워크",
-    price: "32,000원",
-    seller: "송이",
-    img: "./img/products/network.jpg",
-    soldOut: false
-  },
-  {
-    id: 4,
-    name: "파이썬",
-    price: "25,000원",
-    seller: "송이",
-    img: "./img/products/python.jpg",
-    soldOut: false
-  }
-];
-
-if (!localStorage.getItem("wishlist")) {
-  localStorage.setItem("wishlist", JSON.stringify(sampleWishlist));
-}
-
 function renderWishlist() {
   const container = document.getElementById("wishlistContainer");
   const count = document.getElementById("totalCount");
@@ -45,17 +6,25 @@ function renderWishlist() {
   const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
   count.textContent = wishlist.length;
 
-  wishlist.forEach((item, index) => {
+  wishlist.forEach((productId, index) => {
+    const item = PRODUCTS_LIST.find((product) => product.id == productId);
+    if (!item) return;
+
     const product = document.createElement("div");
     product.className = "product-card";
 
     product.innerHTML = `
-      ${item.soldOut ? '<span class="sold-out">판매완료</span>' : ''}
-      <img src="${item.img}" alt="${item.name}">
-      <button class="like-btn liked" onclick="removeFromWishlist(${index})"></button>
-      <p class="product-title">${item.name}</p>
-      <p class="product-price">${item.price}</p>
-      <p class="product-seller">${item.seller}</p>
+      <div class="product-img-container" style="background-image: url('${
+        item.img
+      }');">
+        ${item.soldOut ? '<div class="sold-out">판매완료</div>' : ""}
+        <button class="like-btn" onclick="removeFromWishlist(${index})"></button>
+      </div>
+      <div class="product-text-container">
+        <div class="product-name">${item.name}</div>
+        <div class="product-price">${item.price}원</div>
+        <div class="product-seller">${item.seller}</div>
+      </div>
     `;
 
     container.appendChild(product);

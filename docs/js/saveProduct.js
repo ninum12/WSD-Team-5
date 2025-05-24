@@ -73,12 +73,12 @@ document.getElementById("saveBtn").addEventListener("click", (e) => {
 document.getElementById("registerBtn").addEventListener("click", (e) => {
   e.preventDefault();
 
-  //로그인 기능 로컬 구현 후 추가
-  // const currentUser = loadFromLocalStorage("currentUser");
-  // if (!currentUser || !currentUser.username) {
-  //   alert("로그인 후 상품을 등록할 수 있습니다.");
-  //   return;
-  // }
+  const currentUser = loadFromLocalStorage("loggedInUserId");
+  if (!currentUser || !currentUser.username) {
+    alert("로그인 후 상품을 등록할 수 있습니다.");
+    window.location.href = "./login.html";
+    return;
+  }
 
   const productName = document.getElementById("productName").value.trim();
   const productDescription = document
@@ -109,8 +109,7 @@ document.getElementById("registerBtn").addEventListener("click", (e) => {
     name: data.name,
     categories: data.categories,
     price: data.price,
-    seller: "송이",
-    //seller: currentUser.username,
+    seller: currentUser.username,
     img: "./img/products/python.jpg",
     use: data.use,
     damage: data.damage,

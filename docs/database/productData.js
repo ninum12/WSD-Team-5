@@ -66,7 +66,6 @@ function loadFromLocalStorage(key) {
   return data ? JSON.parse(data) : null;
 }
 
-// ✅ 최초 1회만 초기화
 function initLocalProductList() {
   const existing = loadFromLocalStorage("productsList");
   if (!existing) {
@@ -74,8 +73,7 @@ function initLocalProductList() {
   }
 }
 
-// 페이지 로딩 시 호출
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   initLocalProductList();
 
   const products = loadFromLocalStorage("productsList");

@@ -79,12 +79,27 @@
         <div>이다빈</div>
       </div>
     </footer>
-    <script src="./js/slideBanner.js"></script>
     <script src="./database/productData.js"></script>
+
     <script src="./js/productsRender.js"></script>
     <script src="./js/favorites.js"></script>
     <script src="./js/productNavigation.js"></script>
+    <script src="./js/slideBanner.js"></script>
     <script src="./js/searchBar.js"></script>
     <script src="./js/goToMypage.js"></script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const products = loadFromLocalStorage("productsList") || [];
+
+        const available = products.filter((p) => !p.soldOut);
+        const soldOut = products.filter((p) => p.soldOut);
+        const sortedProducts = [...available, ...soldOut];
+
+        renderProductList(sortedProducts);
+        applyWishList();
+        bindFavoriteEvents();
+      });
+    </script>
   </body>
 </html>

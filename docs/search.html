@@ -90,20 +90,14 @@
             <div class="category-btns-container">대학을 먼저 선택해주세요</div>
           </div>
         </div>
-        <div id="category-result">
-          <div class="category-items-container">
-            <div class="category-item">교재</div>
-            <button class="category-item-del-btn">
-              <img src="./img/icon/category-del-icon.png" />
-            </button>
-          </div>
-          <div class="category-items-container">
-            <div class="category-item">교재</div>
-            <button class="category-item-del-btn">
-              <img src="./img/icon/category-del-icon.png" />
-            </button>
-          </div>
+        <div id="category-results">
+          <div>선택한 카테고리:</div>
         </div>
+
+        <div style="margin: 10px 0">
+          <button id="filterCategoryBtn">선택한 카테고리로 상품 필터링</button>
+        </div>
+
         <div class="about-search-products">
           <div id="totalProduct">총 0개</div>
           <ul class="order-by-container">
@@ -128,15 +122,12 @@
     <script src="./database/productData.js"></script>
     <script src="./js/productsRender.js"></script>
     <script src="./js/favorites.js"></script>
-    <script src="./js/productNavigation.js"></script>
     <script src="./database/thirdCategory.js"></script>
     <script src="./js/categoryOptions.js"></script>
-    <!-- <script src="./js/sortProducts.js"></script> -->
-    <script src="./js/searchResults.js"></script>
+    <script src="./js/filterUtils.js"></script>
+
+    <script src="./js/categoryFilter.js"></script>
     <script src="./js/searchBar.js"></script>
-    <script src="./js/goToMypage.js"></script>
-    <script>
-      renderSearchResults();
-    </script>
+    <script src="./js/searchResults.js"></script>
   </body>
 </html>

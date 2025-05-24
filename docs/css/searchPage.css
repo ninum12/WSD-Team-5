@@ -85,12 +85,14 @@
   font-weight: var(--medium);
 }
 
-#category-result {
+#category-results {
   display: flex;
   flex-direction: row;
+  gap: 10px;
   width: 100%;
   justify-content: start;
-  gap: 8px;
+  font-size: 14px;
+  color: var(--blue-light);
 }
 
 .category-items-container {

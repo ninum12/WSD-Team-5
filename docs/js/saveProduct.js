@@ -65,10 +65,20 @@ document.getElementById("saveBtn").addEventListener("click", (e) => {
   const data = collectFormData();
   setCookie("tempProductData", JSON.stringify(data), 7);
   alert("임시 저장되었습니다. 7일간 유지됩니다.");
+
+  localStorage.setItem("mypageTab", "draft");
+  window.location.href = "./mypage.html";
 });
 
 document.getElementById("registerBtn").addEventListener("click", (e) => {
   e.preventDefault();
+
+  //로그인 기능 로컬 구현 후 추가
+  // const currentUser = loadFromLocalStorage("currentUser");
+  // if (!currentUser || !currentUser.username) {
+  //   alert("로그인 후 상품을 등록할 수 있습니다.");
+  //   return;
+  // }
 
   const productName = document.getElementById("productName").value.trim();
   const productDescription = document
@@ -86,8 +96,37 @@ document.getElementById("registerBtn").addEventListener("click", (e) => {
   }
 
   const data = collectFormData();
-  saveToLocalStorage("registeredProductData", data);
+
+  const existingList = loadFromLocalStorage("productsList") || [];
+
+  const maxId = existingList.reduce(
+    (max, item) => Math.max(max, item.id || 0),
+    0
+  );
+
+  const newProduct = {
+    id: maxId + 1,
+    name: data.name,
+    categories: data.categories,
+    price: data.price,
+    seller: "송이",
+    //seller: currentUser.username,
+    img: "./img/products/python.jpg",
+    use: data.use,
+    damage: data.damage,
+    description: data.description,
+    prefer: data.prefer,
+    inPerson: data.inPerson,
+    soldOut: false,
+  };
+
+  existingList.push(newProduct);
+  saveToLocalStorage("productsList", existingList);
+
   alert("등록 완료! 로컬스토리지에 저장되었습니다.");
+
+  localStorage.setItem("mypageTab", "activity");
+  window.location.href = "./mypage.html";
 });
 
 window.addEventListener("load", () => {

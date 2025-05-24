@@ -56,3 +56,28 @@ const PRODUCTS_LIST = [
     soldOut: false,
   },
 ];
+
+function saveToLocalStorage(key, data) {
+  localStorage.setItem(key, JSON.stringify(data));
+}
+
+function loadFromLocalStorage(key) {
+  const data = localStorage.getItem(key);
+  return data ? JSON.parse(data) : null;
+}
+
+// ✅ 최초 1회만 초기화
+function initLocalProductList() {
+  const existing = loadFromLocalStorage("productsList");
+  if (!existing) {
+    saveToLocalStorage("productsList", PRODUCTS_LIST);
+  }
+}
+
+// 페이지 로딩 시 호출
+window.addEventListener("load", () => {
+  initLocalProductList();
+
+  const products = loadFromLocalStorage("productsList");
+  if (products) renderProductList(products);
+});

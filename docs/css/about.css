@@ -88,6 +88,7 @@
   aspect-ratio: 4/3;
   border: 1px solid var(--gray-light);
   border-radius: 6px;
+  overflow: hidden;
 }
 
 .service-img img {

@@ -30,7 +30,7 @@ export const serviceContent = `
           </div>
         </div>
         <div class="service-img">
-          <img src="" />
+          <img src="./img/about/chatting.png" />
         </div>
       </div>
       <div class="service-card">

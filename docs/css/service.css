@@ -1,0 +1,56 @@
+main {
+  margin-bottom: 150px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+}
+
+.tab.active {
+  border-bottom: 3px solid var(--blue-light);
+  color: var(--blue-light);
+}
+
+.item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.title {
+  display: flex;
+  padding: 12px;
+  padding-right: 500px;
+  gap: 100px;
+
+  cursor: pointer;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  right: 15px;
+}
+
+.content {
+  display: none;
+  padding: 12px;
+  background-color: var(--gray-light);
+}
+
+.item.open .content {
+  display: block;
+}

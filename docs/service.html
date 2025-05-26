@@ -1,1 +1,162 @@
-공지사항
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>송이 장터</title>
+    <link rel="stylesheet" href="./css/wholeSetting.css" />
+    <link rel="stylesheet" href="./css/service.css" />
+  </head>
+  <body>
+    <div class="whole-container">
+      <header>
+        <div class="top-nav-container">
+          <li><a href="./login.html">로그인</a></li>
+          <li><a href="./login.html">회원가입</a></li>
+          <li><a href="./inquiry.html">고객센터</a></li>
+        </div>
+        <div class="container">
+          <button onclick="location.href='./home.html'">
+            <img
+              class="logo-img"
+              src="./img/icon/songteo.png"
+              alt="송이 장터"
+            />
+          </button>
+          <div class="search-bar">
+            <input id="search-input" placeholder="검색어를 입력해주세요." />
+            <button class="search-btn" id="searchBtn">
+              <img src="./img/icon/search-icon.png" />
+            </button>
+          </div>
+          <div class="login-nav-container">
+            <li><a href="./sellproduct.html">판매하기</a></li>
+            <li><a href="./like.html">찜</a></li>
+            <button
+              class="to-user-page"
+              onclick="location.href='./mypage.html'"
+            >
+              <img class="user-icon" src="./img/user/user-example.png" />
+            </button>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./about.html">서비스소개</a></li>
+            <li><a href="./search.html">무료나눔</a></li>
+            <li><a href="./ranking.html">랭킹</a></li>
+            <li><a href="./service.html">공지사항</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div>
+          <div class="nav-container">
+            <button id="notice" class="tab active">공지사항</button>
+            <button id="inquiry" class="tab">1:1 문의</button>
+          </div>
+
+          <div id="noticeList" style="display: block">
+            <div class="item">
+              <div class="title">
+                [점검 안내] 시스템 정기 점검 안내 (6월 15일 00:00~2:00)
+                <div class="arrow">▼</div>
+              </div>
+              <div class="content">
+                사이트 안정화를 위한 정기 점검이 예정되어 있습니다. 해당 시간
+                동안 서비스 이용이 제한됩니다.
+              </div>
+            </div>
+            <div class="item">
+              <div class="title">
+                [기능 업데이트] 검색 필터 기능 개선 안내
+                <div class="arrow">▼</div>
+              </div>
+              <div class="content">
+                교재/학잠(과잠)/학교 굿즈 카테고리 필터가 추가되어 원하는 상품을
+                더 쉽게 찾을 수 있습니다.
+              </div>
+            </div>
+            <div class="item">
+              <div class="title">
+                [이벤트] 6월 한정! 무료나눔 게시판 활성화 이벤트
+                <div class="arrow">▼</div>
+              </div>
+              <div class="content">
+                무료나눔 게시글을 작성하면 추첨을 통해 눈송이 굿즈를 드립니다.
+              </div>
+            </div>
+            <div class="item">
+              <div class="title">
+                [안내] 거래 주의 공지지
+                <div class="arrow">▼</div>
+              </div>
+              <div class="content">
+                거래 시 기본적인 안전수칙을 꼭 지켜주세요.
+              </div>
+            </div>
+            <div class="item">
+              <div class="title">
+                [안내] 회원 탈퇴
+                <div class="arrow">▼</div>
+              </div>
+              <div class="content">
+                회원 탈퇴 시 게시글은 삭제되지 않고 '탈퇴 회원'으로 표시됩니다.
+              </div>
+            </div>
+          </div>
+
+          <div id="inquiryList" style="display: none">
+            <div class="item">
+              <div class="title">
+                [건의] 사진이 업로드되지 않아요.<span class="arrow">▼</span>
+              </div>
+              <div class="content">
+                사진 용량이 5MB를 초과하는 경우 등록이 되지 않으니 확인
+                부탁드립니다.
+              </div>
+            </div>
+            <div class="item">
+              <div class="title">
+                [기타] 판매자가 연락이 되지 않아요.<span class="arrow">▼</span>
+              </div>
+              <div class="content">
+                거래 중 문제가 발생했다면 운영팀에 알려주세요.
+              </div>
+            </div>
+            <div class="item">
+              <div class="title">
+                [건의] 상품에 후기 기능 추가해주세요.<span class="arrow"
+                  >▼</span
+                >
+              </div>
+              <div class="content">
+                소중한 의견 감사합니다. 후기 기능을 검토해보겠습니다.
+              </div>
+            </div>
+            <div class="item">
+              <div class="title">
+                [질문] 찜한 상품은 어디서 확인하나요?<span class="arrow"
+                  >▼</span
+                >
+              </div>
+              <div class="content">
+                오른쪽 상단의 '찜' 글자를 누르시면 됩니다.
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="team"><b>5조</b></div>
+        <div>방지희</div>
+        <div>신정은</div>
+        <div>이다빈</div>
+      </div>
+    </footer>
+    <script src="./js/searchBar.js"></script>
+    <script src="./js/service.js"></script>
+  </body>
+</html>

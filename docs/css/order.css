@@ -97,9 +97,17 @@ h2 {
   gap: 12px;
 }
 
-.building-select,
-.locker-number,
 .detail-location {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid var(--gray-cool);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.building-select,
+.locker-number {
   flex: 1;
   padding: 10px;
   border: 1px solid var(--gray-cool);

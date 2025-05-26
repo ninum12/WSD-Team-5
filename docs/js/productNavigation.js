@@ -1,18 +1,10 @@
 function bindFavoriteEvents() {
-  document.querySelectorAll(".product-card").forEach((p) => {
-    const productId = p.dataset.id;
-    const likeBtn = p.querySelector(".like-btn");
+  document.querySelectorAll(".product-card").forEach((card) => {
+    const productId = parseInt(card.dataset.id);
+    const likeBtn = card.querySelector(".like-btn");
 
-    likeBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
+    likeBtn.addEventListener("click", () => {
       toggleFavorite(productId, likeBtn);
-    });
-
-    p.addEventListener("click", (e) => {
-      if (!likeBtn.contains(e.target)) {
-        window.location.href = "./product.html";
-      }
     });
   });
 }
-bindFavoriteEvents();

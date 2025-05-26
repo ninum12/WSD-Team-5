@@ -75,6 +75,10 @@ header .container {
   width: 50px;
 }
 
+#search-input {
+  font-size: 14px;
+}
+
 .top-nav-container {
   display: flex;
   justify-content: center;

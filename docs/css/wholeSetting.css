@@ -69,14 +69,31 @@ header {
 header .container {
   justify-content: space-between;
   align-items: end;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 }
-
+#logo {
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
 .logo-img {
   width: 50px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    width: 32px;
+  }
 }
 
 #search-input {
   font-size: 14px;
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
 }
 
 .top-nav-container {
@@ -88,6 +105,11 @@ header .container {
   justify-content: right;
   padding-bottom: 10px;
   font-size: 12px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
 }
 
 .top-nav-container li {
@@ -131,6 +153,12 @@ header .container {
   align-items: center;
   flex-direction: row;
   gap: 20px;
+
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .to-user-page {
@@ -159,16 +187,31 @@ nav ul {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+  }
 }
 
 nav ul li {
   width: 100%;
   padding: 10px 20px;
   text-align: center;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    padding: 10px 10px;
+  }
 }
 
 nav ul li a {
   color: #fff;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+    word-break: keep-all;
+  }
 }
 
 main {
@@ -185,4 +228,9 @@ footer {
   width: 100%;
   background-color: var(--gray-light);
   padding: 50px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }

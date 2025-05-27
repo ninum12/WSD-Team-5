@@ -9,6 +9,11 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 24px 32px;
   margin-bottom: 50px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .product-card {
@@ -43,6 +48,17 @@
   font-weight: var(--bold);
   background-color: #fff;
   display: inline;
+  @media (max-width: 768px) {
+    top: 8px;
+    left: 8px;
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+  @media (max-width: 480px) {
+    top: 4px;
+    left: 4px;
+    font-size: 10px;
+  }
 }
 
 .like-btn {
@@ -58,6 +74,20 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: #fff;
+  @media (max-width: 768px) {
+    bottom: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    background-size: 20px;
+  }
+  @media (max-width: 480px) {
+    bottom: 4px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    background-size: 16px;
+  }
 }
 
 .product-text-container {
@@ -80,14 +110,29 @@
 .product-name {
   font-size: 16px;
   font-weight: var(--demi-light);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .product-price {
   font-size: 16px;
   font-weight: var(--bold);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .product-seller {
   font-size: 10px;
   font-weight: var(--demi-light);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
 }

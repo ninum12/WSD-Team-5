@@ -72,10 +72,3 @@ function initLocalProductList() {
     saveToLocalStorage("productsList", PRODUCTS_LIST);
   }
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-  initLocalProductList();
-
-  const products = loadFromLocalStorage("productsList");
-  if (products) renderProductList(products);
-});

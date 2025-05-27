@@ -3,7 +3,7 @@ const defaultUsers = [
     id: "admin",
     pw: "admin123",
     name: "관리자",
-    role: "admin"
+    role: "admin",
   },
   {
     id: "user1",
@@ -14,10 +14,10 @@ const defaultUsers = [
     major: "컴퓨터과학전공",
     activities: {
       sold: ["빨간 니트", "블루투스 이어폰"],
-      bought: ["자료구조 교재", "캠퍼스 노트"]
+      bought: ["자료구조 교재", "캠퍼스 노트"],
     },
     liked: ["아이폰 케이스", "미니 선풍기"],
-    drafts: ["운영체제 교재 글", "스탠드 조명 글"]
+    drafts: ["운영체제 교재 글", "스탠드 조명 글"],
   },
   {
     id: "user2",
@@ -28,11 +28,11 @@ const defaultUsers = [
     major: "데이터사이언스전공",
     activities: {
       sold: [],
-      bought: ["키보드", "필통"]
+      bought: ["키보드", "필통"],
     },
     liked: ["무드등", "눈송이 인형"],
-    drafts: []
-  }
+    drafts: [],
+  },
 ];
 
 if (!localStorage.getItem("users")) {
@@ -51,7 +51,7 @@ function login(isAdmin = false) {
   }
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
-  const matchedUser = users.find(user => user.id === id && user.pw === pw);
+  const matchedUser = users.find((user) => user.id === id && user.pw === pw);
 
   if (!matchedUser) {
     errorMsg.textContent = "아이디 또는 비밀번호가 올바르지 않습니다.";
@@ -69,7 +69,10 @@ function login(isAdmin = false) {
   }
 
   // 로그인한 사용자 ID 저장
-  localStorage.setItem("loggedInUserId", matchedUser.id);
+  localStorage.setItem(
+    "loggedInUserId",
+    JSON.stringify({ username: `${matchedUser.id}` })
+  );
 
   alert(`${matchedUser.name}님, 로그인 성공!`);
 

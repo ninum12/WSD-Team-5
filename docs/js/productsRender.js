@@ -31,3 +31,10 @@ function renderProductList(products) {
     container.appendChild(card);
   });
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  initLocalProductList();
+
+  const products = loadFromLocalStorage("productsList");
+  if (products) renderProductList(products);
+});

@@ -1,1 +1,131 @@
-주문하기
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품 주문</title>
+    <link rel="stylesheet" href="./css/wholeSetting.css" />
+    <link rel="stylesheet" href="./css/order.css" />
+  </head>
+  <body>
+    <div class="whole-container">
+      <header>
+        <div class="top-nav-container">
+          <li><a href="./login.html">로그인</a></li>
+          <li><a href="./login.html">회원가입</a></li>
+          <li><a href="./inquiry.html">고객센터</a></li>
+        </div>
+        <div class="container">
+          <button onclick="location.href='./home.html'">
+            <img class="logo-img" src="./img/icon/songteo.png" alt="송이 장터" />
+          </button>
+          <div class="search-bar">
+            <input id="search-input" placeholder="검색어를 입력해주세요." />
+            <button class="search-btn" id="searchBtn">
+              <img src="./img/icon/search-icon.png" />
+            </button>
+          </div>
+          <div class="login-nav-container">
+            <li><a href="./sellproduct.html">판매하기</a></li>
+            <li><a href="./like.html">찜</a></li>
+            <button class="to-user-page" onclick="location.href='./mypage.html'">
+              <img class="user-icon" src="./img/user/user-example.png" />
+            </button>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./about.html">서비스소개</a></li>
+            <li><a href="./search.html">무료나눔</a></li>
+            <li><a href="./ranking.html">랭킹</a></li>
+            <li><a href="./service.html">공지사항</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="order-container">
+          <section class="product-info">
+            <button class="back-button">&lt;</button>
+            <div class="product-summary">
+              <div class="image-placeholder">이미지</div>
+              <div>
+                <div class="product-name">상품명</div>
+                <div class="product-price">10,000원</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="orderer-info">
+            <h2>주문자 정보</h2>
+            <input type="text" placeholder="이름을 입력해 주세요." required />
+            <input type="email" placeholder="이메일을 입력해 주세요." required />
+            <input type="text" placeholder="연락처를 입력해 주세요." required />
+          </section>
+
+          <section class="trade-method">
+            <h2>거래 방법 선택</h2>
+            <div class="method-option">
+              <label><input type="radio" name="method" value="사물함" checked /> 사물함</label>
+              <label><input type="radio" name="method" value="직거래" /> 직거래</label>
+            </div>
+
+            <div class="locker-info" id="locker-info">
+              <div class="locker-top">
+                <select class="building-select">
+                  <option>건물 선택</option>
+                </select>
+                <input type="text" placeholder="사물함 번호" class="locker-number" />
+              </div>
+            </div>
+
+            <div class="direct-info" id="direct-info" style="display: none;">
+              <div id="direct-map"></div>
+              <p class="click-guide">지도를 클릭하여 위치를 지정하세요.</p>
+              <input type="text" placeholder="상세 위치 설명" class="detail-location" />
+            </div>
+          </section>
+
+          <section class="payment-section">
+            <h2>결제수단</h2>
+            <div class="payment-methods">
+              <label><input type="radio" name="pay-method" value="direct" checked /> 만나서 결제</label>
+              <label><input type="radio" name="pay-method" value="account" /> 계좌 이체</label>
+            </div>
+            <div class="refund-info">
+              <input type="text" placeholder="은행명 입력" />
+              <input type="text" placeholder="계좌번호 입력" />
+              <input type="text" placeholder="은행주명 입력" />
+            </div>
+          </section>
+
+          <section class="total-payment">
+            <h2>결제금액</h2>
+            <div class="total">
+              <span>총 결제금액:</span>
+              <strong>10,000원</strong>
+            </div>
+          </section>
+
+          <section class="agreement">
+            <label><input type="checkbox" id="agree-all" /> 상품 구매에 동의합니다.</label>
+          </section>
+
+          <button class="submit-button" disabled>10,000원 결제하기</button>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <div class="team"><b>5조</b></div>
+          <div>방지희</div>
+          <div>신정은</div>
+          <div>이다빈</div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f25e3ac80300ce3a85db0b8e305c44f6&libraries=services"></script>
+    <script src="./js/order.js"></script>
+  </body>
+</html>

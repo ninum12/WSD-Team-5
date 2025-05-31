@@ -14,7 +14,7 @@
 .tab {
   padding: 4px 8px;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid var(--gray-light);
   @media (max-width: 768px) {
   }
   @media (max-width: 480px) {
@@ -34,9 +34,10 @@
   font-size: 36px;
   font-weight: var(--bold);
   @media (max-width: 768px) {
+    font-size: 28px;
   }
   @media (max-width: 480px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -53,9 +54,10 @@
   font-size: 20px;
   font-weight: var(--bold);
   @media (max-width: 768px) {
+    font-size: 16px;
   }
   @media (max-width: 480px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -63,6 +65,7 @@
   width: 100%;
   @media (max-width: 768px) {
     word-break: keep-all;
+    font-size: 14px;
   }
   @media (max-width: 480px) {
     font-size: 12px;
@@ -100,6 +103,13 @@
   width: 100%;
   padding: 10px;
   font-weight: var(--bold);
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .service-description {
@@ -108,9 +118,9 @@
   font-size: 14px;
   word-break: keep-all;
   @media (max-width: 768px) {
+    padding: 0;
   }
   @media (max-width: 480px) {
-    padding: 0;
     font-size: 10px;
     word-break: keep-all;
   }

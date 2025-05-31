@@ -18,6 +18,11 @@
   font-size: 24px;
   font-weight: var(--bold);
   padding: 10px 0;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+  }
 }
 
 .chatting-product {
@@ -27,6 +32,11 @@
   gap: 10px;
   border: 1px solid var(--gray-light);
   padding: 20px;
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+  @media (max-width: 480px) {
+  }
 }
 
 .product-img-container {
@@ -35,6 +45,10 @@
   background-size: cover;
   background-position: center;
   border-radius: 6px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+  }
 }
 
 .product-text-container {
@@ -44,10 +58,18 @@
 
 .product-name {
   font-weight: var(--bold);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+  }
 }
 
 .product-price {
   color: var(--gray-dark);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+  }
 }
 
 .chatting {
@@ -60,12 +82,22 @@
   overflow-y: auto;
   gap: 10px;
   border-radius: 5px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    height: 300px;
+  }
 }
 
 .chat-message {
   padding: 4px 8px;
   border-radius: 5px;
   max-width: 60%;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .chat-message.user {
@@ -87,6 +119,12 @@
   flex-direction: row;
   width: 100%;
   gap: 8px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+    gap: 4px;
+  }
 }
 
 #chat-input {

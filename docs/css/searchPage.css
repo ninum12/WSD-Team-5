@@ -8,6 +8,12 @@
   padding: 50px 0 8px 0;
   font-size: 24px;
   font-weight: var(--bold);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    padding: 30px 0 0 0;
+    font-size: 20px;
+  }
 }
 
 .category-btns-table {
@@ -33,6 +39,12 @@
   border-right: 1px solid var(--gray-cool);
   font-size: 14px;
   font-weight: var(--medium);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    flex: 0 0 50px;
+    font-size: 10px;
+  }
 }
 
 .category-btns-container {
@@ -42,21 +54,41 @@
   width: 100%;
   height: fit-content;
   gap: 10px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    gap: 0;
+  }
 }
 
 #firstCategory .category-btns-container {
   padding: 0 20px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    padding: 0;
+  }
 }
 
 #secondCategory .category-btns-container {
   padding: 0 20px;
   overflow-x: auto;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    padding: 0;
+  }
 }
 
 #thirdCategory .category-btns-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .category-btn {
@@ -65,6 +97,12 @@
   color: #000;
   font-size: 14px;
   font-weight: var(--light);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
 }
 
 #secondCategory .category-btn {
@@ -79,6 +117,11 @@
   text-align: start;
   box-sizing: border-box;
   word-break: keep-all;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    padding: 8px 10px;
+  }
 }
 
 .category-btn:hover {
@@ -103,6 +146,11 @@
   font-size: 14px;
   color: var(--blue-light);
   flex-wrap: wrap;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
 }
 
 .category-apply-wrapper {
@@ -119,6 +167,12 @@
   background-color: var(--blue-light);
   color: #fff;
   cursor: pointer;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    padding: 4px 10px;
+    font-size: 10px;
+  }
 }
 
 #filterCategoryBtn:hover {
@@ -136,12 +190,22 @@
 #totalProduct {
   font-size: 16px;
   font-weight: var(--medium);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 }
 
 .order-by-container {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    gap: 0;
+  }
 }
 
 .order-by {
@@ -149,4 +213,10 @@
   font-size: 14px;
   font-weight: var(--light);
   cursor: pointer;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    padding: 4px;
+    font-size: 10px;
+  }
 }

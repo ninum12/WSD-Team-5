@@ -2,7 +2,6 @@
   justify-content: center;
   align-items: center;
 }
-
 textarea {
   all: unset;
 }
@@ -16,6 +15,12 @@ form {
   padding: 50px 0 18px 0;
   border-bottom: 1px solid #000;
   font-size: 24px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    padding: 30px 0 8px 0;
+  }
 }
 
 .each-form-wrapper {
@@ -24,6 +29,13 @@ form {
   width: 100%;
   padding-top: 20px;
   align-items: start;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+  }
 }
 
 .form-name {
@@ -33,6 +45,14 @@ form {
   flex-direction: row;
   justify-content: start;
   align-items: end;
+  @media (max-width: 768px) {
+    width: 100px;
+    font-size: 16px;
+  }
+  @media (max-width: 480px) {
+    font-size: 14px;
+    font-weight: var(--medium);
+  }
 }
 
 .form-input {
@@ -52,12 +72,17 @@ form {
 
 .image-box {
   width: 120px;
-  height: 120px;
+  aspect-ratio: 1/1;
   position: relative;
   border: 1px solid var(--gray-cool);
   border-radius: 6px;
   overflow: hidden;
   background-color: #fafafa;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    width: 80px;
+  }
 }
 
 .image-box img.preview {
@@ -71,9 +96,14 @@ form {
   top: 5px;
   right: 5px;
   width: 20px;
-  height: 20px;
+  aspect-ratio: 1/1;
   cursor: pointer;
   z-index: 10;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    width: 16px;
+  }
 }
 
 .add-button {
@@ -86,6 +116,12 @@ form {
   font-size: 24px;
   color: var(--gray-dark);
   background-color: #fafafa;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    width: 80px;
+    font-size: 20px;
+  }
 }
 
 input[type="file"] {
@@ -96,10 +132,21 @@ input[type="file"] {
   width: 100%;
   font-size: 14px;
   font-weight: var(--light);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 10px;
+    word-break: keep-all;
+  }
 }
 
 .product-name-wrapper {
   flex-direction: row;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
 }
 
 .text-input-box {
@@ -109,11 +156,22 @@ input[type="file"] {
   padding: 10px 20px;
   font-size: 14px;
   box-sizing: border-box;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
 }
 
 .countWord {
   font-size: 14px;
   font-weight: var(--light);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 #categoryArea {
@@ -155,6 +213,11 @@ input[type="file"] {
   box-sizing: border-box;
   font-size: 14px;
   font-weight: var(--light);
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .category-btn:hover {
@@ -170,6 +233,11 @@ input[type="file"] {
   width: 100%;
   font-size: 14px;
   color: #ff0000;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .category {
@@ -184,6 +252,11 @@ input[type="file"] {
 
 #productConditionArea .form-input {
   gap: 10px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    gap: 4px;
+  }
 }
 
 #productConditionArea .form-input div {
@@ -192,11 +265,21 @@ input[type="file"] {
 
 .condition-name {
   font-size: 14px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .radio-container {
   font-size: 14px;
   padding: 0 0 10px 0;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .product-description-wrapper {
@@ -207,6 +290,11 @@ input[type="file"] {
 
 #productDescription {
   height: 160px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 #countWordDescription {
@@ -217,10 +305,23 @@ input[type="file"] {
 .price-input-wrapper {
   flex-direction: row;
   justify-content: start;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
 }
 
 #productPrice {
   max-width: 320px;
+}
+
+.unit {
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .preferred-methods-wrapper,
@@ -229,6 +330,11 @@ input[type="file"] {
   flex-direction: row;
   justify-content: start;
   font-size: 14px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .submit-button-area {
@@ -238,6 +344,12 @@ input[type="file"] {
   width: 100%;
   gap: 10px;
   padding: 50px 0 18px 0;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    gap: 4px;
+    padding: 30px 0 8px 0;
+  }
 }
 
 .submit-button-area button {
@@ -247,6 +359,13 @@ input[type="file"] {
   font-size: 20px;
   box-sizing: border-box;
   border-radius: 6px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media (max-width: 480px) {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
 }
 
 #saveBtn {

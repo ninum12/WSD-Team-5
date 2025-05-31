@@ -14,7 +14,7 @@ const content = document.getElementById("tabContent");
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     tabs.forEach((t) => {
-      t.style.borderBottom = "2px solid transparent";
+      t.style.borderBottom = "2px solid var(--gray-light)";
       t.style.fontWeight = "normal";
     });
 

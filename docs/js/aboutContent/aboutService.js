@@ -35,7 +35,7 @@ export const serviceContent = `
       </div>
       <div class="service-card">
         <div class="service-text-wrapper">
-          <div class="service-name">판매자가 판매 중인 물품 추천</div>
+          <div class="service-name">판매자의 물품 추천</div>
           <div class="service-description">
             판매자가 판매 중인 다른 물품을 쉽게 확인할 수 있습니다. 해당 기능을
             통해 상품을 쉽게 탐색할 수 있습니다.

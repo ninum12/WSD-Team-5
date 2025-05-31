@@ -127,6 +127,10 @@
 .category-btn:hover {
   color: var(--blue-light);
   font-weight: var(--medium);
+  @media (max-width: 768px) {
+    color: #000;
+    font-weight: var(--light);
+  }
 }
 
 #thirdCategory .category-btns-container {
@@ -173,10 +177,6 @@
     padding: 4px 10px;
     font-size: 10px;
   }
-}
-
-#filterCategoryBtn:hover {
-  background-color: var(--blue);
 }
 
 .about-search-products {

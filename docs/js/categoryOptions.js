@@ -49,36 +49,44 @@ document.querySelectorAll("#firstCategory .category-btn").forEach((btn) => {
   btn.style.fontWeight = "var(--light)";
   btn.addEventListener("click", function () {
     const name = this.textContent;
+    const isSelected = this.style.color === "var(--blue-light)";
 
-    document.querySelectorAll("#firstCategory .category-btn").forEach((b) => {
-      b.style.color = "";
-      b.style.fontWeight = "var(--light)";
-    });
+    if (isSelected) {
+      this.style.color = "";
+      this.style.fontWeight = "var(--light)";
 
-    const resultCategories = document.querySelectorAll(
-      "#category-results .category"
-    );
-    resultCategories.forEach((el) => {
-      if (
-        [...document.querySelectorAll("#firstCategory .category-btn")]
-          .map((btn) => btn.textContent)
-          .includes(el.textContent.replace(",", ""))
-      ) {
-        el.remove();
-      }
-    });
+      const resultEl = [...resultContainer.querySelectorAll(".category")].find(
+        (el) => el.textContent.replace(",", "") === name
+      );
+      if (resultEl) resultEl.remove();
+    } else {
+      document.querySelectorAll("#firstCategory .category-btn").forEach((b) => {
+        b.style.color = "";
+        b.style.fontWeight = "var(--light)";
+      });
 
-    this.style.color = "var(--blue-light)";
-    this.style.fontWeight = "var(--medium)";
+      const firstCategoryNames = [
+        ...document.querySelectorAll("#firstCategory .category-btn"),
+      ].map((btn) => btn.textContent);
 
-    const div = document.createElement("div");
-    div.className = "category";
-    div.textContent = name + ",";
-    div.addEventListener("click", function () {
-      this.remove();
-      resetButtonStyle(name);
-    });
-    resultContainer.appendChild(div);
+      [...resultContainer.querySelectorAll(".category")].forEach((el) => {
+        if (firstCategoryNames.includes(el.textContent.replace(",", ""))) {
+          el.remove();
+        }
+      });
+
+      this.style.color = "var(--blue-light)";
+      this.style.fontWeight = "var(--medium)";
+
+      const div = document.createElement("div");
+      div.className = "category";
+      div.textContent = name + ",";
+      div.addEventListener("click", function () {
+        this.remove();
+        resetButtonStyle(name);
+      });
+      resultContainer.appendChild(div);
+    }
   });
 });
 

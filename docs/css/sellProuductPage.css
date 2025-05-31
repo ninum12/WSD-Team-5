@@ -223,6 +223,10 @@ input[type="file"] {
 .category-btn:hover {
   color: var(--blue-light);
   font-weight: var(--medium);
+  @media (max-width: 768px) {
+    color: #000;
+    font-weight: var(--light);
+  }
 }
 
 #category-results {

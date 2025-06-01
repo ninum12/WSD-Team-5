@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>송이 장터</title>
     <link rel="stylesheet" href="./css/wholeSetting.css" />
-    <link rel="stylesheet" href="./css/chatting.css" />
+    <link rel="stylesheet" href="./css/productsList.css" />
+    <link rel="stylesheet" href="./css/sharing.css" />
   </head>
   <body>
     <div class="whole-container">
@@ -16,7 +17,7 @@
           <li><a href="./inquiry.html">고객센터</a></li>
         </div>
         <div class="container">
-          <button id="logo" onclick="location.href='./home.html'">
+          <button onclick="location.href='./home.html'">
             <img
               class="logo-img"
               src="./img/icon/songteo.png"
@@ -50,28 +51,7 @@
         </nav>
       </header>
       <main>
-        <div class="chatting-area">
-          <div class="product-seller">송이</div>
-          <div class="chatting-product">
-            <div
-              class="product-img-container"
-              style="background-image: url('./img/products/data-structure.jpg')"
-            ></div>
-            <div class="product-text-container">
-              <div class="product-name">자료구조</div>
-              <div class="product-price">30,000원</div>
-            </div>
-          </div>
-          <div class="chatting"></div>
-          <div class="chat-input-area">
-            <input
-              type="text"
-              id="chat-input"
-              placeholder="메시지를 입력하세요"
-            />
-            <button id="send-btn">전송</button>
-          </div>
-        </div>
+        <div class="product-list"></div>
       </main>
     </div>
     <footer>
@@ -82,7 +62,27 @@
         <div>이다빈</div>
       </div>
     </footer>
+    <script src="./database/productData.js"></script>
+
+    <script src="./js/productsRender.js"></script>
+    <script src="./js/favorites.js"></script>
+    <script src="./js/productNavigation.js"></script>
     <script src="./js/searchBar.js"></script>
-    <script src="./js/chatting.js"></script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const products = loadFromLocalStorage("productsList") || [];
+        const freeProducts = products
+          .filter((product) => product.categories.includes("무료 나눔"))
+          .sort((a, b) => b.id - a.id);
+        const freeAvailable = freeProducts.filter((p) => !p.soldOut);
+        const freeSoldOut = freeProducts.filter((p) => p.soldOut);
+        const free = [...freeAvailable, ...freeSoldOut];
+
+        renderProductList(free);
+        applyWishList();
+        bindFavoriteEvents();
+      });
+    </script>
   </body>
 </html>

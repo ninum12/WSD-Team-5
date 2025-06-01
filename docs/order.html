@@ -16,8 +16,12 @@
           <li><a href="./inquiry.html">고객센터</a></li>
         </div>
         <div class="container">
-          <button onclick="location.href='./home.html'">
-            <img class="logo-img" src="./img/icon/songteo.png" alt="송이 장터" />
+          <button id="logo" onclick="location.href='./home.html'">
+            <img
+              class="logo-img"
+              src="./img/icon/songteo.png"
+              alt="송이 장터"
+            />
           </button>
           <div class="search-bar">
             <input id="search-input" placeholder="검색어를 입력해주세요." />
@@ -28,7 +32,10 @@
           <div class="login-nav-container">
             <li><a href="./sellproduct.html">판매하기</a></li>
             <li><a href="./like.html">찜</a></li>
-            <button class="to-user-page" onclick="location.href='./mypage.html'">
+            <button
+              class="to-user-page"
+              onclick="location.href='./mypage.html'"
+            >
               <img class="user-icon" src="./img/user/user-example.png" />
             </button>
           </div>
@@ -36,7 +43,7 @@
         <nav>
           <ul>
             <li><a href="./about.html">서비스소개</a></li>
-            <li><a href="./search.html">무료나눔</a></li>
+            <li><a href="./sharing.html">무료나눔</a></li>
             <li><a href="./ranking.html">랭킹</a></li>
             <li><a href="./service.html">공지사항</a></li>
           </ul>
@@ -59,15 +66,25 @@
           <section class="orderer-info">
             <h2>주문자 정보</h2>
             <input type="text" placeholder="이름을 입력해 주세요." required />
-            <input type="email" placeholder="이메일을 입력해 주세요." required />
+            <input
+              type="email"
+              placeholder="이메일을 입력해 주세요."
+              required
+            />
             <input type="text" placeholder="연락처를 입력해 주세요." required />
           </section>
 
           <section class="trade-method">
             <h2>거래 방법 선택</h2>
             <div class="method-option">
-              <label><input type="radio" name="method" value="사물함" checked /> 사물함</label>
-              <label><input type="radio" name="method" value="직거래" /> 직거래</label>
+              <label
+                ><input type="radio" name="method" value="사물함" checked />
+                사물함</label
+              >
+              <label
+                ><input type="radio" name="method" value="직거래" />
+                직거래</label
+              >
             </div>
 
             <div class="locker-info" id="locker-info">
@@ -80,22 +97,36 @@
                   <option>프라임관</option>
                   <option>과학관</option>
                 </select>
-                <input type="text" placeholder="사물함 번호" class="locker-number" />
+                <input
+                  type="text"
+                  placeholder="사물함 번호"
+                  class="locker-number"
+                />
               </div>
             </div>
 
-            <div class="direct-info" id="direct-info" style="display: none;">
+            <div class="direct-info" id="direct-info" style="display: none">
               <div id="direct-map"></div>
               <p class="click-guide">지도를 클릭하여 위치를 지정하세요.</p>
-              <input type="text" placeholder="상세 위치 설명" class="detail-location" />
+              <input
+                type="text"
+                placeholder="상세 위치 설명"
+                class="detail-location"
+              />
             </div>
           </section>
 
           <section class="payment-section">
             <h2>결제수단</h2>
             <div class="payment-methods">
-              <label><input type="radio" name="pay-method" value="direct" checked /> 만나서 결제</label>
-              <label><input type="radio" name="pay-method" value="account" /> 계좌 이체</label>
+              <label
+                ><input type="radio" name="pay-method" value="direct" checked />
+                만나서 결제</label
+              >
+              <label
+                ><input type="radio" name="pay-method" value="account" /> 계좌
+                이체</label
+              >
             </div>
             <div class="refund-info">
               <input type="text" placeholder="은행명 입력" />
@@ -113,7 +144,10 @@
           </section>
 
           <section class="agreement">
-            <label><input type="checkbox" id="agree-all" /> 상품 구매에 동의합니다.</label>
+            <label
+              ><input type="checkbox" id="agree-all" /> 상품 구매에
+              동의합니다.</label
+            >
           </section>
 
           <button class="submit-button" disabled>10,000원 결제하기</button>

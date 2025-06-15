@@ -1,1 +1,203 @@
-관리자
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>송이 장터</title>
+    <link rel="stylesheet" href="./css/wholeSetting.css" />
+    <link rel="stylesheet" href="./css/manager.css" />
+  </head>
+  <body>
+    <div class="whole-container">
+      <header>
+        <div class="top-nav-container">
+          <li><a href="./login.html">로그인</a></li>
+          <li><a href="./login.html">회원가입</a></li>
+          <li><a href="./inquiry.html">고객센터</a></li>
+        </div>
+        <div class="container">
+          <button onclick="location.href='./index.html'">
+            <img
+              class="logo-img"
+              src="./img/icon/songteo.png"
+              alt="송이 장터"
+            />
+          </button>
+          <div class="search-bar">
+            <input id="search-input" placeholder="검색어를 입력해주세요." />
+            <button class="search-btn" id="searchBtn">
+              <img src="./img/icon/search-icon.png" />
+            </button>
+          </div>
+          <div class="login-nav-container">
+            <li><a href="./sellproduct.html">판매하기</a></li>
+            <li><a href="./like.html">찜</a></li>
+            <button
+              class="to-user-page"
+              onclick="location.href='./mypage.html'"
+            >
+              <img class="user-icon" src="./img/user/user-example.png" />
+            </button>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./about.html">서비스소개</a></li>
+            <li><a href="./sharing.html">무료나눔</a></li>
+            <li><a href="./ranking.html">랭킹</a></li>
+            <li><a href="./service.html">공지사항</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div>
+          <div class="tab">
+            <button
+              id="member-tab"
+              class="tab-button active"
+              onclick="showMemberInfoManager()"
+            >
+              회원 정보
+            </button>
+            <button
+              id="product-tab"
+              class="tab-button"
+              onclick="showProductListManager()"
+            >
+              상품 관리
+            </button>
+          </div>
+
+          <div id="member-info">
+            <table>
+              <thead>
+                <tr>
+                  <th>닉네임</th>
+                  <th>아이디</th>
+                  <th>이름</th>
+                  <th>학번</th>
+                  <th>전공</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>경제송이</td>
+                  <td>rudwp</td>
+                  <td>이수아</td>
+                  <td>2404937</td>
+                  <td>경제학부</td>
+                </tr>
+                <tr>
+                  <td>작곡송이</td>
+                  <td>wkrrhr</td>
+                  <td>박예린</td>
+                  <td>2508493</td>
+                  <td>작곡과</td>
+                </tr>
+                <tr>
+                  <td>약송이</td>
+                  <td>dirthd</td>
+                  <td>최하은</td>
+                  <td>2194837</td>
+                  <td>약학부</td>
+                </tr>
+                <tr>
+                  <td>환디송이</td>
+                  <td>ghksel</td>
+                  <td>정서윤</td>
+                  <td>2240594</td>
+                  <td>환경디자인과</td>
+                </tr>
+                <tr>
+                  <td>화생송이</td>
+                  <td>ghktod</td>
+                  <td>이민지</td>
+                  <td>2395847</td>
+                  <td>화공생명공학부</td>
+                </tr>
+                <tr>
+                  <td>교육송이</td>
+                  <td>rydbr</td>
+                  <td>임유림</td>
+                  <td>2349382</td>
+                  <td>교육학과</td>
+                </tr>
+                <tr>
+                  <td>생명송이</td>
+                  <td>todaud</td>
+                  <td>안소연</td>
+                  <td>2433304</td>
+                  <td>생명시스템학부</td>
+                </tr>
+                <tr>
+                  <td>식품송이</td>
+                  <td>tlrvna</td>
+                  <td>이민주</td>
+                  <td>2320594</td>
+                  <td>식품영양학과</td>
+                </tr>
+                <tr>
+                  <td>행정송이</td>
+                  <td>godwjd</td>
+                  <td>문라희</td>
+                  <td>2240593</td>
+                  <td>행정학과</td>
+                </tr>
+                <tr>
+                  <td>법송이</td>
+                  <td>qjqthd</td>
+                  <td>신주아</td>
+                  <td>2359403</td>
+                  <td>법학과</td>
+                </tr>
+                <tr>
+                  <td>글융송이</td>
+                  <td>rmfdbd</td>
+                  <td>조효진</td>
+                  <td>2543950</td>
+                  <td>글로벌융합부</td>
+                </tr>
+                <tr>
+                  <td>글협송이</td>
+                  <td>rmfguq</td>
+                  <td>하여진</td>
+                  <td>2348392</td>
+                  <td>글로벌협력전공</td>
+                </tr>
+                <tr>
+                  <td>영문송이</td>
+                  <td>dudans</td>
+                  <td>박예원</td>
+                  <td>2397453</td>
+                  <td>영어영문학부</td>
+                </tr>
+                <tr>
+                  <td>미디어송이</td>
+                  <td>aleldj</td>
+                  <td>김은서</td>
+                  <td>2523940</td>
+                  <td>미디어학부</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="product-list">
+            <div id="product-container" class="product-container"></div>
+          </div>
+        </div>
+        <footer>
+          <div class="container">
+            <div class="team"><b>5조</b></div>
+            <div>방지희</div>
+            <div>신정은</div>
+            <div>이다빈</div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="./js/searchBar.js"></script>
+    <script src="./database/productData.js"></script>
+    <script src="./js/manager.js"></script>
+  </body>
+</html>

@@ -67,3 +67,46 @@ main h1 {
   width: 100%;
   margin: 10px 0;
 }
+
+@media (max-width: 768px) {
+  .rank {
+    font-size: 20px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+
+  .numberOfTransactions {
+    font-size: 10px;
+  }
+
+  .chattingButton {
+    margin: 0 0 0 20vw;
+    width: 70px;
+    font-size: 15px;
+  }
+
+  .first .user-icon,
+  .second .user-icon,
+  .third .user-icon {
+    width: 70px;
+    border-radius: 0%;
+    border: 20px solid var(--blue--light);
+  }
+}
+
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .chattingButton {
+    margin: 0 0 0 10vw;
+  }
+
+  .rank {
+    font-size: 20px;
+  }
+}

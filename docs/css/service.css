@@ -54,3 +54,9 @@ main {
 .item.open .content {
   display: block;
 }
+
+@media (max-width: 768px) {
+  .title {
+    padding-right: 20vw;
+  }
+}

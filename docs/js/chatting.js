@@ -37,3 +37,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+////////////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const productName = params.get("name");
+  const productPrice = params.get("price");
+  const productImg = params.get("img");
+
+  const nameEl = document.querySelector(".product-name");
+  const priceEl = document.querySelector(".product-price");
+  const imgContainer = document.querySelector(".product-img-container");
+
+  if (productName && priceEl) {
+    nameEl.textContent = productName;
+    priceEl.textContent = `${productPrice}원`;
+  }
+
+  if (productImg && imgContainer) {
+    imgContainer.style.backgroundImage = `url('${productImg}')`;
+  }
+});
+////////////////////////////////////////////////////////////

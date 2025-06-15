@@ -78,7 +78,7 @@ function login(isAdmin = false) {
 
   // 페이지 이동
   if (isAdmin) {
-    location.href = "./admin.html";
+    location.href = "./manager.html";
   } else {
     location.href = "./mypage.html";
   }

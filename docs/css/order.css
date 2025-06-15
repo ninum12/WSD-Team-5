@@ -29,7 +29,19 @@ section {
   gap: 16px;
 }
 
-.image-placeholder {
+/* .image-placeholder {
+  width: 80px;
+  height: 80px;
+  background: var(--gray-light);
+  text-align: center;
+  line-height: 80px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--gray-dark);
+  font-weight: var(--medium);
+} */
+
+.image-placeholder img {
   width: 80px;
   height: 80px;
   background: var(--gray-light);

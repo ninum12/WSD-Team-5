@@ -22,6 +22,20 @@ const defaultUsers = [
   {
     id: "user2",
     pw: "abcd",
+    name: "꽃송이",
+    role: "user",
+    studentId: "2314322",
+    major: "데이터사이언스전공",
+    activities: {
+      sold: [],
+      bought: ["키보드", "필통"],
+    },
+    liked: ["무드등", "눈송이 인형"],
+    drafts: [],
+  },
+  {
+    id: "user3",
+    pw: "rufdl",
     name: "눈결이",
     role: "user",
     studentId: "2311122",

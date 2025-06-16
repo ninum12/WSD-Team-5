@@ -56,60 +56,14 @@
           <section class="profile-section">
             <div class="profile-image">이미지</div>
             <div class="profile-info">
-              <p class="nickname">사용자 닉네임</p>
-              <p class="id">아이디</p>
+              <p class="nickname"></p>
+              <p class="id"></p>
             </div>
           </section>
 
           <section class="seller-products">
             <h2>판매 내역</h2>
-            <div class="product-list">
-              <div class="product-container">
-                <div
-                  class="product-img-container"
-                  style="
-                    background-image: url('./img/products/data-structure.jpg');
-                  "
-                >
-                  <span class="sold-out">판매완료</span>
-                  <button class="like-btn" onclick="toggleLike(this)"></button>
-                </div>
-                <div class="product-text-container">
-                  <p class="product-name">자료구조</p>
-                  <p class="product-price">30,000원</p>
-                  <p class="product-seller">송이</p>
-                </div>
-              </div>
-
-              <div class="product-container">
-                <div
-                  class="product-img-container"
-                  style="background-image: url('./img/products/os.jpg')"
-                >
-                  <span class="sold-out">판매완료</span>
-                  <button class="like-btn" onclick="toggleLike(this)"></button>
-                </div>
-                <div class="product-text-container">
-                  <p class="product-name">운영체제</p>
-                  <p class="product-price">35,000원</p>
-                  <p class="product-seller">송이</p>
-                </div>
-              </div>
-
-              <div class="product-container">
-                <div
-                  class="product-img-container"
-                  style="background-image: url('./img/products/network.jpg')"
-                >
-                  <button class="like-btn" onclick="toggleLike(this)"></button>
-                </div>
-                <div class="product-text-container">
-                  <p class="product-name">네트워크</p>
-                  <p class="product-price">32,000원</p>
-                  <p class="product-seller">송이</p>
-                </div>
-              </div>
-            </div>
+            <div class="product-list"></div>
           </section>
         </div>
       </main>
@@ -127,5 +81,8 @@
     <script src="./js/searchBar.js"></script>
     <script src="./js/mypage.js"></script>
     <script src="./js/username.js"></script>
+    <script src=".//database/productData.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/userProfile.js"></script>
   </body>
 </html>

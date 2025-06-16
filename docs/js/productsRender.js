@@ -18,7 +18,6 @@ function createProductCard(product) {
       <div class="product-seller">${seller}</div>
     </div>
   `;
-  //////////////////////////////////////////
   card.addEventListener("click", (event) => {
     if (event.target.closest(".like-btn")) {
       event.stopPropagation();
@@ -26,7 +25,6 @@ function createProductCard(product) {
     }
     window.location.href = `./product.html?id=${id}`;
   });
-  /////////////////////////////////////////
   return card;
 }
 

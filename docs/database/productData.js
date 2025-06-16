@@ -257,7 +257,7 @@ const PRODUCTS_LIST = [
     categories: ["교재", "글로벌융합", "글로벌융합부"],
     price: "21,000",
     seller: "글융송이",
-    img: "./img/products/globla-business.jpg",
+    img: "./img/products/global-business.jpg",
     use: "often",
     damage: "no",
     description: "국제 경영학입니다.",

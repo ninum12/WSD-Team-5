@@ -61,7 +61,9 @@ function renderProductDetail(product) {
 
 window.addEventListener("DOMContentLoaded", () => {
   const productId = getProductIdFromURL();
-  const product = PRODUCTS_LIST.find((p) => p.id === productId);
+  const product = loadFromLocalStorage("productsList").find(
+    (p) => p.id === productId
+  );
   if (product) {
     renderProductDetail(product);
   }

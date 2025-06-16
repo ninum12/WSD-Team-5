@@ -110,7 +110,7 @@ document.getElementById("registerBtn").addEventListener("click", (e) => {
     categories: data.categories,
     price: data.price,
     seller: currentUser.username,
-    img: "./img/products/python.jpg",
+    img: "./img/products/linear-algebra.png",
     use: data.use,
     damage: data.damage,
     description: data.description,

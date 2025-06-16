@@ -159,7 +159,7 @@ const PRODUCTS_LIST = [
     categories: ["사회과학"],
     price: "10,000",
     seller: "행정송이",
-    img: "./img/products/publicAdministration.png",
+    img: "./img/products/public-administration.png",
     use: "almost-new",
     damage: "no",
     description: "필기나 구겨짐 전혀 없습니다",

@@ -66,15 +66,14 @@ document.getElementById("saveBtn").addEventListener("click", (e) => {
   setCookie("tempProductData", JSON.stringify(data), 7);
   alert("임시 저장되었습니다. 7일간 유지됩니다.");
 
-  localStorage.setItem("mypageTab", "draft");
-  window.location.href = "./mypage.html";
+  window.location.href = "./index.html";
 });
 
 document.getElementById("registerBtn").addEventListener("click", (e) => {
   e.preventDefault();
 
-  const currentUser = loadFromLocalStorage("loggedInUserId");
-  if (!currentUser || !currentUser.username) {
+  const currentUserId = loadFromLocalStorage("loggedInUserId");
+  if (!currentUserId || !currentUserId.username) {
     alert("로그인 후 상품을 등록할 수 있습니다.");
     window.location.href = "./login.html";
     return;
@@ -109,7 +108,7 @@ document.getElementById("registerBtn").addEventListener("click", (e) => {
     name: data.name,
     categories: data.categories,
     price: data.price,
-    seller: currentUser.username,
+    seller: defaultUsers.find((u) => u.id === currentUserId.username).name,
     img: "./img/products/linear-algebra.png",
     use: data.use,
     damage: data.damage,

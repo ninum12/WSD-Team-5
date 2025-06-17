@@ -51,8 +51,13 @@
         </nav>
       </header>
       <main>
+        <div class="load-btn-area">
+          <button id="loadBtn" title="임시저장 데이터를 불러옵니다.">
+            불러오기<img src="./img/icon/load-circle.svg" />
+          </button>
+        </div>
         <form>
-          <div class="sell-product-title">상품정보</div>
+          <div class="sell-product-title product-info">상품정보</div>
           <div class="each-form-wrapper">
             <div class="form-name">상품이미지</div>
             <div class="form-input">
@@ -211,7 +216,7 @@
               </label>
             </div>
           </div>
-          <div class="submit-button-area">
+          <div class="submit-btns-area">
             <button id="saveBtn" type="button">임시저장</button>
             <button id="registerBtn" type="submit">등록하기</button>
           </div>
@@ -226,6 +231,7 @@
         <div>이다빈</div>
       </div>
     </footer>
+    <script src=".//database/usersData.js"></script>
     <script src="./js/searchBar.js"></script>
     <script src="./js/imageUpload.js"></script>
     <script src="./js/countWord.js"></script>
@@ -234,5 +240,6 @@
     <script src="./js/productCondition.js"></script>
     <script src="./js/formatPrice.js"></script>
     <script src="./js/saveProduct.js"></script>
+    <script src="./js/loadProduct.js"></script>
   </body>
 </html>

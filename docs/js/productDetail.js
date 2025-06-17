@@ -69,29 +69,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function createProductCard(product) {
-  const { id, name, price, seller, img, soldOut } = product;
-
-  const card = document.createElement("div");
-  card.className = "product-card";
-  card.dataset.id = id;
-
-  const soldOutTag = soldOut ? '<div class="sold-out">판매완료</div>' : "";
-
-  card.innerHTML = `
-    <div class="product-img-container" style="background-image: url('${img}');">
-      ${soldOutTag}
-      <button class="like-btn"></button>
-    </div>
-    <div class="product-text-container">
-      <div class="product-name">${name}</div>
-      <div class="product-price">${price}원</div>
-      <div class="product-seller">${seller}</div>
-    </div>
-  `;
-  return card;
-}
-
 function getRandomProducts(products, count = 6) {
   const shuffled = [...products].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
@@ -107,11 +84,21 @@ function renderProductList() {
   randomProducts.forEach((product) => {
     const item = document.createElement("div");
     item.className = "product-item";
+    const soldOutTag = product.soldOut
+      ? '<div class="sold-out">판매완료</div>'
+      : "";
 
     item.innerHTML = `
-      <img src="${product.img}" alt="${product.name}" />
+    <div class="product-img-container" style="background-image: url('${product.img}');">
+      ${soldOutTag}
+      <button class="like-btn"></button>
+    </div>
+    <div class="product-text-container">
       <div class="product-name">${product.name}</div>
-    `;
+      <div class="product-price">${product.price}원</div>
+      <div class="product-seller">${product.seller}</div>
+    </div>
+  `;
 
     item.addEventListener("click", () => {
       window.location.href = `./product.html?id=${product.id}`;

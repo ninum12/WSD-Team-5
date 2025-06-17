@@ -122,10 +122,9 @@ document.getElementById("registerBtn").addEventListener("click", (e) => {
   existingList.push(newProduct);
   saveToLocalStorage("productsList", existingList);
 
-  alert("등록 완료! 로컬스토리지에 저장되었습니다.");
+  alert("상품이 등록되었습니다!");
 
-  localStorage.setItem("mypageTab", "activity");
-  window.location.href = "./mypage.html";
+  window.location.href = "./index.html";
 });
 
 window.addEventListener("load", () => {

@@ -24,6 +24,7 @@ function toggleCategoryInResults(name, button) {
     const div = document.createElement("div");
     div.className = "category";
     div.textContent = name + ",";
+    div.style.cursor = "pointer";
     div.addEventListener("click", function () {
       this.remove();
       resetButtonStyle(name);
@@ -39,6 +40,7 @@ function createCategoryButton(text) {
   btn.className = "category-btn";
   btn.textContent = text;
   btn.style.fontWeight = "var(--light)";
+  btn.style.cursor = "pointer";
   btn.addEventListener("click", function () {
     toggleCategoryInResults(text, btn);
   });
@@ -47,6 +49,7 @@ function createCategoryButton(text) {
 
 document.querySelectorAll("#firstCategory .category-btn").forEach((btn) => {
   btn.style.fontWeight = "var(--light)";
+  btn.style.cursor = "pointer";
   btn.addEventListener("click", function () {
     const name = this.textContent;
     const isSelected = this.style.color === "var(--blue-light)";
@@ -92,6 +95,7 @@ document.querySelectorAll("#firstCategory .category-btn").forEach((btn) => {
 
 document.querySelectorAll("#secondCategory .category-btn").forEach((btn) => {
   btn.style.fontWeight = "var(--light)";
+  btn.style.cursor = "pointer";
   btn.addEventListener("click", function () {
     const category = this.textContent;
 

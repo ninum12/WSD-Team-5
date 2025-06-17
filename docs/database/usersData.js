@@ -1,0 +1,50 @@
+const defaultUsers = [
+  {
+    id: "admin",
+    pw: "admin123",
+    name: "관리자",
+    role: "admin",
+  },
+  {
+    id: "user1",
+    pw: "user123",
+    name: "눈송이",
+    role: "user",
+    studentId: "2412345",
+    major: "컴퓨터과학전공",
+    activities: {
+      sold: ["빨간 니트", "블루투스 이어폰"],
+      bought: ["자료구조 교재", "캠퍼스 노트"],
+    },
+    liked: ["아이폰 케이스", "미니 선풍기"],
+    drafts: ["운영체제 교재 글", "스탠드 조명 글"],
+  },
+  {
+    id: "user2",
+    pw: "abcd",
+    name: "꽃송이",
+    role: "user",
+    studentId: "2314322",
+    major: "데이터사이언스전공",
+    activities: {
+      sold: [],
+      bought: ["키보드", "필통"],
+    },
+    liked: ["무드등", "눈송이 인형"],
+    drafts: [],
+  },
+  {
+    id: "user3",
+    pw: "rufdl",
+    name: "눈결이",
+    role: "user",
+    studentId: "2311122",
+    major: "데이터사이언스전공",
+    activities: {
+      sold: [],
+      bought: ["키보드", "필통"],
+    },
+    liked: ["무드등", "눈송이 인형"],
+    drafts: [],
+  },
+];

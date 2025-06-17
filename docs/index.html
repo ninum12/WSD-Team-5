@@ -12,9 +12,9 @@
   <body>
     <div class="whole-container">
       <header>
-        <div class="top-nav-container">
-          <li><a href="./login.html">로그인</a></li>
-          <li><a href="./login.html">회원가입</a></li>
+        <div class="top-nav-container" id="topNav">
+          <li id="loginItem"><a href="./login.html">로그인</a></li>
+          <li id="signupItem"><a href="./login.html">회원가입</a></li>
           <li><a href="./inquiry.html">고객센터</a></li>
         </div>
         <div class="container">
@@ -80,7 +80,8 @@
       </div>
     </footer>
     <script src="./database/productData.js"></script>
-
+    <script src=".//database/usersData.js"></script>
+    <script src="./js/checkLogged.js"></script>
     <script src="./js/productsRender.js"></script>
     <script src="./js/favorites.js"></script>
     <script src="./js/productNavigation.js"></script>

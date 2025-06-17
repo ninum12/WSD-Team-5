@@ -83,6 +83,7 @@ header .container {
   }
 }
 #logo {
+  cursor: pointer;
   @media (max-width: 480px) {
     width: 100%;
   }
@@ -128,6 +129,23 @@ header .container {
 
 .top-nav-container li a {
   color: var(--gray-dark);
+}
+
+#welcomeUser {
+  display: flex;
+}
+
+#welcomeUser div {
+  font-weight: var(--bold);
+  color: var(--blue-light);
+}
+
+#logOutBtn {
+  color: var(--gray-dark);
+
+  &:hover {
+    color: #000;
+  }
 }
 
 .search-bar {

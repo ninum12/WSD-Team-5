@@ -10,9 +10,9 @@
   <body>
     <div class="whole-container">
       <header>
-        <div class="top-nav-container">
-          <li><a href="./login.html">로그인</a></li>
-          <li><a href="./login.html">회원가입</a></li>
+        <div class="top-nav-container" id="topNav">
+          <li id="loginItem"><a href="./login.html">로그인</a></li>
+          <li id="signupItem"><a href="./login.html">회원가입</a></li>
           <li><a href="./inquiry.html">고객센터</a></li>
         </div>
         <div class="container">
@@ -163,7 +163,8 @@
         </div>
       </footer>
     </div>
-
+    <script src=".//database/usersData.js"></script>
+    <script src="./js/checkLogged.js"></script>
     <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f25e3ac80300ce3a85db0b8e305c44f6&libraries=services"></script>
     <script src="./js/order.js"></script>
   </body>

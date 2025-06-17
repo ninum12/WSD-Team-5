@@ -17,7 +17,13 @@ function renderProductDetail(product) {
         <div class="price">${product.price}원</div>
         <div class="detail">
           <div>카테고리: ${product.categories.join(" / ")}</div>
-          <div>사용 횟수: ${product.use}</div>
+          <div>사용 횟수: ${
+            product.use === "new"
+              ? "없음"
+              : product.use === "almost-new"
+              ? "1~2회"
+              : "3회 이상"
+          }</div>
           <div>손상 여부: ${product.damage === "no" ? "없음" : "있음"}</div>
           <div>거래 방법: ${
             product.inPerson === "yes" ? "직거래" : "사물함"

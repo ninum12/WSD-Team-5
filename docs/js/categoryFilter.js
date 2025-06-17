@@ -8,6 +8,8 @@ filterBtn.addEventListener("click", () => {
   const query = localStorage.getItem("searchQuery")?.trim() || "";
   const allProducts = getAllProducts();
 
+  console.log(selectedCategories);
+
   const matched = filterProductsByQueryAndCategory(
     allProducts,
     query,

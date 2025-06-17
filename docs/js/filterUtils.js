@@ -6,18 +6,26 @@ function filterProductsByQueryAndCategory(products, query, selectedCategories) {
   let result = products;
 
   if (query) {
-    result = result.filter(
-      (p) =>
-        p.name.includes(query) ||
-        p.seller.includes(query) ||
-        p.description.includes(query)
+    const keywords = query
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word.trim())
+      .filter((word) => word.length > 0);
+
+    result = result.filter((p) =>
+      keywords.every(
+        (kw) =>
+          p.name.toLowerCase().includes(kw) ||
+          p.seller.toLowerCase().includes(kw) ||
+          p.description.toLowerCase().includes(kw)
+      )
     );
   }
 
   if (selectedCategories.length > 0) {
     result = result.filter((product) =>
-      product.categories.some((cat) =>
-        selectedCategories.some((selected) =>
+      selectedCategories.every((selected) =>
+        product.categories.some((cat) =>
           cat.toLowerCase().includes(selected.toLowerCase().trim())
         )
       )

@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
-  const loggedInUserId = localStorage.getItem("loggedInUserId");
 
-  const currentUser = users.find((u) => u.id === loggedInUserId);
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUserId"));
+  const currentUser = users.find((u) => u.id === loggedInUser?.username);
 
   if (currentUser) {
     document.querySelector(".nickname").textContent = currentUser.name;
@@ -44,6 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="info-row">이름: ${currentUser.name}</div>
       <div class="info-row">학번: ${currentUser.studentId}</div>
       <div class="info-row">전공: ${currentUser.major}</div>
+    `;
+
+    const likeEl = document.getElementById("like");
+    likeEl.innerHTML = `
+      <p><strong>💖 찜한 항목</strong></p>
+      <ul>${currentUser.liked.map((item) => `<li>${item}</li>`).join("")}</ul>
     `;
 
     const activityEl = document.getElementById("activity");
@@ -58,16 +64,5 @@ document.addEventListener("DOMContentLoaded", () => {
         .join("")}</ul>
     `;
 
-    const likeEl = document.getElementById("like");
-    likeEl.innerHTML = `
-      <p><strong>💖 찜한 항목</strong></p>
-      <ul>${currentUser.liked.map((item) => `<li>${item}</li>`).join("")}</ul>
-    `;
-
-    const draftEl = document.getElementById("draft");
-    draftEl.innerHTML = `
-      <p><strong>📝 임시 저장 글</strong></p>
-      <ul>${currentUser.drafts.map((item) => `<li>${item}</li>`).join("")}</ul>
-    `;
   }
 });

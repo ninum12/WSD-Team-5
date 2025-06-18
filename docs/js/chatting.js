@@ -38,15 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const productName = params.get("name");
   const productPrice = params.get("price");
+  const productSeller = params.get("seller");
   const productImg = params.get("img");
 
   const nameEl = document.querySelector(".product-name");
   const priceEl = document.querySelector(".product-price");
+  const sellerEl = document.querySelector(".product-seller");
   const imgContainer = document.querySelector(".product-img-container");
 
   if (productName && priceEl) {
@@ -54,8 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
     priceEl.textContent = `${productPrice}원`;
   }
 
+  if (productSeller) {
+    sellerEl.textContent = productSeller;
+  }
+
   if (productImg && imgContainer) {
     imgContainer.style.backgroundImage = `url('${productImg}')`;
   }
 });
-////////////////////////////////////////////////////////////

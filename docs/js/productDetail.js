@@ -130,6 +130,7 @@ function goToChatting(productId) {
     id: product.id,
     name: product.name,
     price: product.price,
+    seller: product.seller,
     img: product.img,
   });
   location.href = `chatting.html?${params.toString()}`;

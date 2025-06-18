@@ -89,7 +89,9 @@ function renderProductList() {
 
   randomProducts.forEach((product) => {
     const item = document.createElement("div");
-    item.className = "product-item";
+    item.className = "product-card";
+    item.dataset.id = product.id;
+
     const soldOutTag = product.soldOut
       ? '<div class="sold-out">판매완료</div>'
       : "";
@@ -106,16 +108,21 @@ function renderProductList() {
     </div>
   `;
 
-    item.addEventListener("click", () => {
-      window.location.href = `./product.html?id=${product.id}`;
+    item.addEventListener("click", (event) => {
+      if (event.target.closest(".like-btn")) {
+        event.stopPropagation();
+        return;
+      }
+      window.location.href = `./product.html?id=${id}`;
     });
-
     container.appendChild(item);
   });
 }
 
 initLocalProductList();
 renderProductList();
+applyWishList();
+bindFavoriteEvents();
 
 function goToChatting(productId) {
   const product = PRODUCTS_LIST.find((p) => p.id === productId);

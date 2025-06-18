@@ -62,23 +62,11 @@ main {
   padding-left: 10px;
 }
 
-.product-list {
+.product-card {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   padding: 10px;
-}
-
-.product-item {
-  text-align: center;
-  width: 120px;
-  flex-shrink: 0;
-}
-
-.product-item img {
-  width: 100%;
-  height: 150px;
-  border-radius: 8px;
 }
 
 .product-name {
@@ -134,14 +122,6 @@ main {
   #buyButton {
     padding: 8px 80px;
   }
-
-  .product-list {
-    grid-template-columns: repeat(3, 1fr);
-    display: grid;
-    gap: 12px;
-    overflow-x: unset;
-    padding: 10px 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -170,14 +150,6 @@ main {
 
   .recommend-text {
     font-size: 16px;
-  }
-
-  .product-item {
-    width: 100px;
-  }
-
-  .product-item img {
-    height: 120px;
   }
 
   .product-name {

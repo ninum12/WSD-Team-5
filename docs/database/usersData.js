@@ -29,4 +29,12 @@ const defaultUsers = [
     studentId: "2311122",
     major: "데이터사이언스전공",
   },
+  {
+    id: "user4",
+    pw: "user456",
+    name: "웹송이",
+    role: "user",
+    studentId: "2456789",
+    major: "컴퓨터과학전공",
+  },
 ];
